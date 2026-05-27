@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "./colors.css";
+@import "./font.css";
 
 @theme {
   --font-pretendard: "Pretendard";
