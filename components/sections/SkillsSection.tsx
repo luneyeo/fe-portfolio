@@ -4,7 +4,10 @@ import { skills } from '@/data/skills';
 
 export default function SkillsSection() {
   return (
-    <section className="mx-auto flex w-280 max-w-280 flex-col gap-16 px-6">
+    <section
+      className="mx-auto flex w-280 max-w-280 flex-col gap-16 px-6"
+      id="skills"
+    >
       <SectionTitle
         title="기술 스택"
         subTitle="SKILLS"

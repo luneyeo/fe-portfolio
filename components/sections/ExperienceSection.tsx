@@ -17,7 +17,10 @@ function SectionHeader({ title }: { title: string }) {
 
 export default function ExperienceSection() {
   return (
-    <section className="mx-auto flex w-280 max-w-280 flex-col gap-16 px-6">
+    <section
+      className="mx-auto flex w-280 max-w-280 flex-col gap-16 px-6"
+      id="experience"
+    >
       <SectionTitle
         title="경력 및 교육"
         subTitle="EXPERIENCE"

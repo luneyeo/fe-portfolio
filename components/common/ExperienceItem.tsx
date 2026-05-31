@@ -25,9 +25,9 @@ export default function ExperienceItem({
         <span className="typo-18-medium">
           {company} / {role}
         </span>
-        <p className="typo-14-regular text-primary-300">{position}</p>
+        <p className="typo-14-regular text-gray-500">{position}</p>
         <button
-          className="typo-14-regular mt-2 flex cursor-pointer items-center text-left text-gray-400 hover:text-gray-200"
+          className="typo-14-regular mt-2 flex cursor-pointer items-center text-left text-gray-500 hover:text-gray-200"
           onClick={() => setOpen((prev) => !prev)}
         >
           <IcChevronDown
@@ -36,13 +36,13 @@ export default function ExperienceItem({
           <span>업무 내용 보기</span>
         </button>
         {open && (
-          <ul className="border-primary-700 mt-2 flex flex-col gap-2 rounded-lg border px-6 py-4">
+          <ul className="bg-primary-800 mt-2 flex flex-col gap-2 rounded-lg border border-gray-800 px-6 py-4">
             {tasks.map((task) => (
               <li
                 key={task}
-                className="typo-14-regular text-primary-100 flex items-center gap-2"
+                className="typo-14-regular flex items-center gap-2 text-gray-200"
               >
-                <span className="text-primary-300">•</span>
+                <span className="text-gray-200">•</span>
                 {task}
               </li>
             ))}

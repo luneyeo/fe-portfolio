@@ -1,3 +1,5 @@
+import Footer from '@/components/ui/Footer';
+import Header from '@/components/ui/Header';
 import '@/styles/globals.css';
 import { Noto_Sans_KR } from 'next/font/google';
 import React from 'react';
@@ -16,7 +18,9 @@ export default function RootLayout({
   return (
     <html lang="ko" className={notoSansKR.variable}>
       <body>
-        <main className="flex flex-col gap-50">{children}</main>
+        <Header />
+        <main className="mb-30 flex flex-col gap-50">{children}</main>
+        <Footer />
       </body>
     </html>
   );

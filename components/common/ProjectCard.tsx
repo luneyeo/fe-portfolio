@@ -21,10 +21,10 @@ export default function ProjectCard({
   skills,
 }: ProjectCardProps) {
   return (
-    <div className="bg-primary-800 flex h-86.5 w-full gap-6 overflow-hidden rounded-2xl border border-gray-800 p-7.5">
+    <div className="bg-primary-800 flex h-86.5 w-full gap-8 overflow-hidden rounded-4xl border border-gray-800 p-7.5">
       <div className="relative w-96 shrink-0">
         <Image
-          className="rounded-xl object-cover"
+          className="rounded-3xl object-cover"
           src={thumbnail}
           alt={name}
           fill

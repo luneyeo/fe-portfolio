@@ -33,7 +33,7 @@ export default function SkillCard({
       </div>
       <div className="flex flex-col gap-1">
         <span className="typo-16-medium">{name}</span>
-        <p className="typo-14-regular text-primary-200">{description}</p>
+        <p className="typo-14-regular text-gray-500">{description}</p>
       </div>
     </div>
   );

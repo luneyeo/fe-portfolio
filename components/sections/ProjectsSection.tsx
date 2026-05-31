@@ -4,7 +4,10 @@ import { projects } from '@/data/projects';
 
 export default function ProjectsSection() {
   return (
-    <section className="mx-auto flex w-280 max-w-280 flex-col gap-16 px-6">
+    <section
+      className="mx-auto flex w-280 max-w-280 flex-col gap-16 px-6"
+      id="projects"
+    >
       <SectionTitle
         title="프로젝트"
         subTitle="PROJECTS"
