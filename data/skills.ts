@@ -2,18 +2,7 @@ import IcCode from '@/components/ui/icons/IcCode';
 import IcDatabase from '@/components/ui/icons/IcDatabase';
 import IcTool from '@/components/ui/icons/IcTool';
 
-export type Skill = {
-  name: string;
-  description?: string;
-  iconSrc: string;
-};
-
-export type SkillCategory = {
-  label: string;
-  LabelIcon: React.ComponentType<{ className?: string }>;
-  variant?: 'full' | 'compact';
-  items: Skill[];
-};
+import type { SkillCategory } from '@/types';
 
 export const skills: SkillCategory[] = [
   {

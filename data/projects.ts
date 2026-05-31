@@ -1,12 +1,4 @@
-export type Project = {
-  thumbnail: string;
-  subTitle: string;
-  name: string;
-  period: string;
-  teamSize: string;
-  skills: string[];
-  link?: string;
-};
+import type { Project } from '@/types';
 
 export const projects: Project[] = [
   {
