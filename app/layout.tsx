@@ -1,12 +1,11 @@
-import "@/styles/globals.css";
-import localFont from "next/font/local";
-import React from "react";
+import '@/styles/globals.css';
+import { Noto_Sans_KR } from 'next/font/google';
+import React from 'react';
 
-const pretendard = localFont({
-  src: "../styles/assets/PretendardVariable.woff2",
-  display: "swap",
-  weight: "45 920",
-  variable: "--font-pretendard",
+const notoSansKR = Noto_Sans_KR({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-noto-sans-kr',
 });
 
 export default function RootLayout({
@@ -15,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko" className={pretendard.variable}>
+    <html lang="ko" className={notoSansKR.variable}>
       <body>{children}</body>
     </html>
   );

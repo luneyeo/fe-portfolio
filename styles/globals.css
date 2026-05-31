@@ -2,20 +2,15 @@
 @import './colors.css';
 @import './font.css';
 
-@theme {
-  --font-pretendard: 'Pretendard';
-}
-
 @layer base {
   :root {
-    --default-font-family: var(--font-pretendard);
     color: var(--color-white);
   }
 
   html,
   body {
     font-family:
-      var(--font-pretendard),
+      var(--font-noto-sans-kr),
       system-ui,
       -apple-system,
       BlinkMacSystemFont,
