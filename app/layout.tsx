@@ -15,7 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" className={notoSansKR.variable}>
-      <body>{children}</body>
+      <body>
+        <main className="flex flex-col gap-50">{children}</main>
+      </body>
     </html>
   );
 }

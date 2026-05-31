@@ -17,7 +17,7 @@ export default function SkillCard({
 }: SkillCardProps) {
   if (variant === 'compact') {
     return (
-      <div className="flex justify-center items-center gap-2 rounded-xl border border-gray-800 bg-primary-800 p-3">
+      <div className="bg-primary-800 flex items-center justify-center gap-2 rounded-xl border border-gray-800 p-3">
         <div className="relative size-6 shrink-0 overflow-hidden">
           <Image className="object-contain" src={iconSrc} alt={iconAlt} fill />
         </div>
@@ -27,7 +27,7 @@ export default function SkillCard({
   }
 
   return (
-    <div className="flex items-center gap-4 rounded-2xl border border-gray-800 bg-primary-800 p-4">
+    <div className="bg-primary-800 flex items-center gap-4 rounded-2xl border border-gray-800 p-4">
       <div className="relative size-10 shrink-0 overflow-hidden">
         <Image className="object-contain" src={iconSrc} alt={iconAlt} fill />
       </div>

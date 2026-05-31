@@ -11,11 +11,11 @@ export default function SectionTitle({
 }: SectionTitleProps) {
   return (
     <div className="flex flex-col items-center">
-      <p className="typo-16-bold text-blue-500 mb-2 tracking-[.25em]">
+      <span className="typo-12-medium tracking-wide text-blue-500">
         {subTitle}
-      </p>
-      <h2 className="typo-30-medium text-white">{title}</h2>
-      <h3 className="typo-18-regular text-white">{descrpition}</h3>
+      </span>
+      <h2 className="typo-28-medium mb-1">{title}</h2>
+      <h3 className="typo-14-regular text-gray-500">{descrpition}</h3>
     </div>
   );
 }

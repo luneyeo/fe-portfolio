@@ -4,7 +4,7 @@ import { skills } from '@/data/skills';
 
 export default function SkillsSection() {
   return (
-    <section className="flex flex-col gap-13">
+    <section className="mx-auto flex w-280 max-w-280 flex-col gap-16 px-6">
       <SectionTitle
         title="기술 스택"
         subTitle="SKILLS"
@@ -13,7 +13,7 @@ export default function SkillsSection() {
       <div className="flex flex-col gap-14">
         {skills.map(({ label, LabelIcon, variant, items }) => (
           <div key={label} className="">
-            <div className="flex gap-2 items-center mb-5">
+            <div className="mb-5 flex items-center gap-2">
               <LabelIcon className="text-blue-500" />
               <p className="typo-18-medium">{label}</p>
             </div>
