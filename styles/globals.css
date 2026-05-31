@@ -9,6 +9,7 @@
 @layer base {
   :root {
     --default-font-family: var(--font-pretendard);
+    color: var(--color-white);
   }
 
   html,
@@ -21,5 +22,6 @@
       'Segoe UI',
       sans-serif;
     background-color: var(--color-primary-900);
+    color: var(--color-white);
   }
 }
