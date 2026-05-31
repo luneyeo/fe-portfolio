@@ -1,9 +1,9 @@
-@import "tailwindcss";
-@import "./colors.css";
-@import "./font.css";
+@import 'tailwindcss';
+@import './colors.css';
+@import './font.css';
 
 @theme {
-  --font-pretendard: "Pretendard";
+  --font-pretendard: 'Pretendard';
 }
 
 @layer base {
@@ -18,7 +18,8 @@
       system-ui,
       -apple-system,
       BlinkMacSystemFont,
-      "Segoe UI",
+      'Segoe UI',
       sans-serif;
+    background-color: var(--color-primary-900);
   }
 }
