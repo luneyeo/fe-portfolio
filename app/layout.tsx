@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 import localFont from "next/font/local";
+import React from "react";
 
 const pretendard = localFont({
   src: "../styles/assets/PretendardVariable.woff2",
