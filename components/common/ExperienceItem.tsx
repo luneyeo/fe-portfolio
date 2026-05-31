@@ -26,7 +26,6 @@ export default function ExperienceItem({
         <p className="typo-14-regular text-gray-500">
           {role} / {position}
         </p>
-        <p className="typo-14-regular text-gray-500"></p>
         <button
           className="typo-14-regular mt-2 flex cursor-pointer items-center text-left text-gray-500 hover:text-gray-200"
           onClick={() => setOpen((prev) => !prev)}
@@ -41,7 +40,7 @@ export default function ExperienceItem({
             {tasks.map((task) => (
               <li
                 key={task}
-                className="typo-14-regular flex items-center gap-3 text-gray-200"
+                className="typo-14-regular flex items-center gap-2 text-gray-200"
               >
                 <span className="text-gray-200">•</span>
                 {task}

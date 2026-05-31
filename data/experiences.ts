@@ -2,7 +2,7 @@ import type { Education, Experience } from '@/types';
 
 export const experiences: Experience[] = [
   {
-    period: '2023. 07 - 2025. 07',
+    period: '2023. 07 ~ 2025. 07',
     company: '밀버스',
     role: '퍼블리셔',
     position: 'Salesforce Marketing Cloud Engineer',
@@ -17,12 +17,12 @@ export const experiences: Experience[] = [
 
 export const educations: Education[] = [
   {
-    period: '2025. 11 - 2026. 05',
+    period: '2025. 11 ~ 2026. 05',
     institution: '코드잇 스프린트',
     detail: '프론트엔드 부트캠프 22기',
   },
   {
-    period: '2015. 03 - 2019. 02',
+    period: '2015. 03 ~ 2019. 02',
     institution: '순천대학교',
     detail: '영상디자인학과 졸업',
   },

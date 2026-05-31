@@ -49,7 +49,8 @@ export const skills: SkillCategory[] = [
       },
       {
         name: 'Zod',
-        description: '인증/폼 데이터 처리 시 유효성 검증 로직에 활용',
+        description:
+          '인증/폼 데이터 처리 시 React Hook Form과 연계하여 유효성 검증 로직에 활용',
         iconSrc: '/icons/ic-zod.png',
       },
     ],
@@ -74,6 +75,22 @@ export const skills: SkillCategory[] = [
       {
         name: 'Vercel',
         iconSrc: '/icons/ic-vercel.svg',
+      },
+      {
+        name: 'Storybook',
+        iconSrc: '/icons/ic-storybook.svg',
+      },
+      {
+        name: 'Prettier',
+        iconSrc: '/icons/ic-prettier.png',
+      },
+      {
+        name: 'React-Hook-Form',
+        iconSrc: '/icons/ic-storybook.svg',
+      },
+      {
+        name: 'ESLint',
+        iconSrc: '/icons/ic-eslint.svg',
       },
     ],
   },

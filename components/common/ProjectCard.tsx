@@ -30,10 +30,10 @@ export default function ProjectCard({
           fill
         />
       </div>
-      <div className="relative flex flex-1 flex-col justify-end gap-3 py-3">
+      <div className="relative flex flex-1 flex-col justify-end gap-3.5 py-3">
         <button
           type="button"
-          className="typo-14-regular absolute top-0 right-3 flex cursor-pointer items-center gap-1 text-gray-400"
+          className="typo-14-regular absolute top-0 right-3 flex cursor-pointer items-center gap-1 text-gray-400 hover:text-white"
         >
           더보기 <IcAdd />
         </button>
@@ -42,13 +42,14 @@ export default function ProjectCard({
           <h3 className="typo-24-semibold">{name}</h3>
         </div>
         <div className="flex flex-col gap-1">
-          <p className="typo-14-regular">
+          <p className="typo-14-medium">
             제작 기간&nbsp;&nbsp;
-            {period}
+            <span className="typo-14-regular text-gray-300">{period}</span>
           </p>
-          <p className="typo-14-regular">
-            제작 인원&nbsp;&nbsp;
-            {teamSize}
+
+          <p className="typo-14-medium">
+            참여 인원&nbsp;&nbsp;
+            <span className="typo-14-regular text-gray-300">{teamSize}</span>
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
