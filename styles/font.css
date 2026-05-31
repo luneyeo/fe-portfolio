@@ -7,6 +7,8 @@
   --text-18: 1.125rem; /* 18px */
   --text-20: 1.25rem; /* 20px */
   --text-24: 1.5rem; /* 24px */
+  --text-28: 1.75rem; /* 28px */
+  --text-30: 1.875rem; /* 30px */
   --text-32: 2rem; /* 32px */
 
   --font-weight-regular: 400;
@@ -152,6 +154,40 @@
 }
 @utility typo-24-bold {
   font-size: var(--text-24);
+  font-weight: var(--font-weight-bold);
+}
+
+@utility typo-28-regular {
+  font-size: var(--text-28);
+  font-weight: var(--font-weight-regular);
+}
+@utility typo-28-medium {
+  font-size: var(--text-28);
+  font-weight: var(--font-weight-medium);
+}
+@utility typo-28-semibold {
+  font-size: var(--text-28);
+  font-weight: var(--font-weight-semibold);
+}
+@utility typo-28-bold {
+  font-size: var(--text-28);
+  font-weight: var(--font-weight-bold);
+}
+
+@utility typo-30-regular {
+  font-size: var(--text-30);
+  font-weight: var(--font-weight-regular);
+}
+@utility typo-30-medium {
+  font-size: var(--text-30);
+  font-weight: var(--font-weight-medium);
+}
+@utility typo-30-semibold {
+  font-size: var(--text-30);
+  font-weight: var(--font-weight-semibold);
+}
+@utility typo-30-bold {
+  font-size: var(--text-30);
   font-weight: var(--font-weight-bold);
 }
 
