@@ -1,8 +1,8 @@
 export default function IcDatabase({ className }: { className?: string }) {
   return (
     <svg
-      width="18"
-      height="18"
+      width="24"
+      height="24"
       viewBox="0 0 14 15"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
