@@ -21,11 +21,12 @@ export default function ExperienceItem({
   return (
     <div className="flex gap-10">
       <p className="typo-16-regular shrink-0">{period}</p>
-      <div className="flex flex-col gap-2">
-        <span className="typo-18-medium">
-          {company} / {role}
-        </span>
-        <p className="typo-14-regular text-gray-500">{position}</p>
+      <div className="flex flex-col gap-1">
+        <span className="typo-18-medium">{company}</span>
+        <p className="typo-14-regular text-gray-500">
+          {role} / {position}
+        </p>
+        <p className="typo-14-regular text-gray-500"></p>
         <button
           className="typo-14-regular mt-2 flex cursor-pointer items-center text-left text-gray-500 hover:text-gray-200"
           onClick={() => setOpen((prev) => !prev)}
@@ -36,11 +37,11 @@ export default function ExperienceItem({
           <span>업무 내용 보기</span>
         </button>
         {open && (
-          <ul className="bg-primary-800 mt-2 flex flex-col gap-2 rounded-lg border border-gray-800 px-6 py-4">
+          <ul className="bg-primary-800 mt-2 flex min-w-150 flex-col gap-4 rounded-lg border border-gray-800 px-6 py-5">
             {tasks.map((task) => (
               <li
                 key={task}
-                className="typo-14-regular flex items-center gap-2 text-gray-200"
+                className="typo-14-regular flex items-center gap-3 text-gray-200"
               >
                 <span className="text-gray-200">•</span>
                 {task}

@@ -66,7 +66,7 @@ export default function Header() {
         <button
           type="button"
           onClick={() => scrollTo('contact')}
-          className="typo-13-semibold bg-primary-900 cursor-pointer rounded-full px-5 py-2 text-white transition-opacity hover:bg-blue-500"
+          className="typo-12-regular bg-primary-900 cursor-pointer rounded-full px-5 py-2 text-white transition-opacity hover:bg-blue-500"
         >
           CONTACT
         </button>

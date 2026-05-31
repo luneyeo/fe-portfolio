@@ -32,8 +32,8 @@ export default function SkillCard({
         <Image className="object-contain" src={iconSrc} alt={iconAlt} fill />
       </div>
       <div className="flex flex-col gap-1">
-        <span className="typo-16-medium">{name}</span>
-        <p className="typo-14-regular text-gray-500">{description}</p>
+        <span className="typo-16-regular">{name}</span>
+        <p className="typo-13-regular text-gray-500">{description}</p>
       </div>
     </div>
   );
