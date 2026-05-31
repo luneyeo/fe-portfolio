@@ -4,23 +4,29 @@ import { skills } from '@/data/skills';
 
 export default function SkillsSection() {
   return (
-    <>
+    <section className="flex flex-col gap-13">
       <SectionTitle
         title="기술 스택"
         subTitle="SKILLS"
         descrpition="실제 프로젝트에서 사용하고 경험한 기술들입니다."
       />
-      {skills.map(({ label, LabelIcon, variant, items }) => (
-        <div key={label} className="">
-          <div className="flex gap-2 items-center">
-            <LabelIcon className="text-blue-500" />
-            <p className="typo-18-medium">{label}</p>
+      <div className="flex flex-col gap-14">
+        {skills.map(({ label, LabelIcon, variant, items }) => (
+          <div key={label} className="">
+            <div className="flex gap-2 items-center mb-5">
+              <LabelIcon className="text-blue-500" />
+              <p className="typo-18-medium">{label}</p>
+            </div>
+            <div
+              className={`grid gap-5 ${variant === 'compact' ? 'grid-cols-5' : 'grid-cols-3'}`}
+            >
+              {items.map((skill) => (
+                <SkillCard key={skill.name} variant={variant} {...skill} />
+              ))}
+            </div>
           </div>
-          {items.map((skill) => (
-            <SkillCard key={skill.name} variant={variant} {...skill} />
-          ))}
-        </div>
-      ))}
-    </>
+        ))}
+      </div>
+    </section>
   );
 }

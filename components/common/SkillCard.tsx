@@ -17,23 +17,23 @@ export default function SkillCard({
 }: SkillCardProps) {
   if (variant === 'compact') {
     return (
-      <div className="flex items-center gap-2 rounded-xl border border-gray-800 bg-primary-800 px-3 py-2">
-        <div className="relative size-8 shrink-0 overflow-hidden">
+      <div className="flex justify-center items-center gap-2 rounded-xl border border-gray-800 bg-primary-800 p-3">
+        <div className="relative size-6 shrink-0 overflow-hidden">
           <Image className="object-contain" src={iconSrc} alt={iconAlt} fill />
         </div>
-        <span className="typo-14-medium">{name}</span>
+        <span className="typo-14-regular">{name}</span>
       </div>
     );
   }
 
   return (
     <div className="flex items-center gap-4 rounded-2xl border border-gray-800 bg-primary-800 p-4">
-      <div className="relative size-17.5 shrink-0 overflow-hidden">
+      <div className="relative size-10 shrink-0 overflow-hidden">
         <Image className="object-contain" src={iconSrc} alt={iconAlt} fill />
       </div>
       <div className="flex flex-col gap-1">
-        <span className="typo-16-bold">{name}</span>
-        {description && <p className="typo-14-medium">{description}</p>}
+        <span className="typo-16-medium">{name}</span>
+        <p className="typo-14-regular text-primary-200">{description}</p>
       </div>
     </div>
   );

@@ -22,7 +22,8 @@ export const skills: SkillCategory[] = [
     items: [
       {
         name: 'React',
-        description: '컴포넌트 기반 UI 개발 및 상태 관리, 성능, 최적화 경험',
+        description:
+          '컴포넌트 기반 UI 개발 및 상태 관리, 성능, 최적화 경험  기반 UI 개발 및 상태 관리, 성능, 최적화 경험 기반 UI 개발 및 상태 관리, 성능, 최적화 경험',
         iconSrc: '/icons/ic-react.svg',
       },
       {
@@ -43,7 +44,7 @@ export const skills: SkillCategory[] = [
     ],
   },
   {
-    label: 'Statement',
+    label: 'State Management & Data',
     LabelIcon: IcDatabase,
     items: [
       {
@@ -59,7 +60,7 @@ export const skills: SkillCategory[] = [
     ],
   },
   {
-    label: 'Tools & Other',
+    label: 'Tools & Others',
     LabelIcon: IcTool,
     variant: 'compact',
     items: [
@@ -70,6 +71,14 @@ export const skills: SkillCategory[] = [
       {
         name: 'Github',
         iconSrc: '/icons/ic-github.svg',
+      },
+      {
+        name: 'Figma',
+        iconSrc: '/icons/ic-figma.svg',
+      },
+      {
+        name: 'Vercel',
+        iconSrc: '/icons/ic-vercel.svg',
       },
     ],
   },
