@@ -11,7 +11,7 @@ export default function SectionTitle({
 }: SectionTitleProps) {
   return (
     <div className="flex flex-col items-center">
-      <span className="typo-14-medium mb-2 tracking-wide text-blue-500">
+      <span className="typo-14-medium mb-2 tracking-wide text-blue-500 uppercase">
         {subTitle}
       </span>
       <h2 className="typo-28-medium mb-1">{title}</h2>

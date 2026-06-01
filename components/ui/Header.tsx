@@ -42,8 +42,8 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 h-16 bg-white">
       <div className="mx-auto flex h-full w-280 max-w-280 items-center justify-between px-6">
+        <div className="h-9 w-9 rounded-full bg-gray-200" />
         <nav className="flex items-center gap-6">
-          <div className="h-9 w-9 rounded-full bg-gray-200" />
           <ul className="flex items-center gap-4">
             {navItems.map(({ id, label }) => (
               <li key={id} className="flex">
@@ -63,13 +63,6 @@ export default function Header() {
             ))}
           </ul>
         </nav>
-        <button
-          type="button"
-          onClick={() => scrollTo('contact')}
-          className="typo-12-regular bg-primary-900 cursor-pointer rounded-full px-5 py-2 text-white transition-opacity hover:bg-blue-500"
-        >
-          CONTACT
-        </button>
       </div>
     </header>
   );

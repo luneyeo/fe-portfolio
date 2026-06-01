@@ -1,4 +1,6 @@
 @theme {
+  --font-archivo: var(--font-archivo-black);
+
   --text-10: 0.625rem; /* 10px */
   --text-12: 0.75rem; /* 12px */
   --text-13: 0.8125rem; /* 13px */

@@ -7,6 +7,28 @@
   --color-primary-800: #1b1f2a;
   --color-primary-900: #10141f;
 
+  --color-blue-500: #4490f9;
+
+  /* === LIGHT TOKENS ===
+  --color-primary-100: #e6eeff;
+  --color-primary-200: #b3ccff;
+  --color-primary-300: #80aaff;
+  --color-primary-400: #4d88ff;
+  --color-primary-500: #0052ff;
+  --color-primary-600: #0047e6;
+  --color-primary-700: #003bcc;
+  --color-primary-800: #002fb3;
+  --color-primary-900: #002399;
+
+  --color-blue-600: #3636f0;
+  --color-blue-500: #3b82f6;
+  --color-blue-400: #6060f0;
+  --color-blue-300: #8686ec;
+  --color-blue-200: #acaef2;
+  --color-blue-100: #c8caf6;
+  --color-blue-50: #e4e5fb;
+  === TOKENS END === */
+
   --color-gray-25: #f8f8f8;
   --color-gray-50: #edeef2;
   --color-gray-100: #e0e0e5;
@@ -22,6 +44,4 @@
 
   --color-black: #000000;
   --color-white: #ffffff;
-
-  --color-blue-500: #4490f9;
 }
