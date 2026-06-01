@@ -30,6 +30,7 @@ export default function RootLayout({
         <Header />
         <main className="mb-40 flex flex-col gap-34">{children}</main>
         <Footer />
+        <div id="modal-root" />
       </body>
     </html>
   );

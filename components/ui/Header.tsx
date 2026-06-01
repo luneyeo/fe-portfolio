@@ -35,12 +35,12 @@ export default function Header() {
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
     if (!el) return;
-    const top = el.getBoundingClientRect().top + window.scrollY - (64 + 40);
+    const top = el.getBoundingClientRect().top + window.scrollY - (72 + 40);
     window.scrollTo({ top, behavior: 'smooth' });
   };
 
   return (
-    <header className="sticky top-0 z-50 h-16 bg-white">
+    <header className="bg-primary-900 sticky top-0 z-50 h-18 border-b border-gray-400">
       <div className="mx-auto flex h-full w-280 max-w-280 items-center justify-between px-6">
         <div className="h-9 w-9 rounded-full bg-gray-200" />
         <nav className="flex items-center gap-6">
@@ -53,8 +53,8 @@ export default function Header() {
                     scrollTo(id);
                     setActiveId(id);
                   }}
-                  className={`typo-14-medium cursor-pointer text-gray-300 transition-colors hover:text-gray-950 ${
-                    activeId === id ? 'typo-14-medium text-gray-950' : ''
+                  className={`typo-14-medium cursor-pointer text-gray-500 transition-colors hover:text-white ${
+                    activeId === id ? 'typo-14-medium text-white' : ''
                   }`}
                 >
                   {label}

@@ -12,6 +12,11 @@ export interface Education {
   detail: string;
 }
 
+export interface ProjectDetail {
+  title: string;
+  content: string;
+}
+
 export interface Project {
   thumbnail: string;
   subTitle: string;
@@ -20,6 +25,11 @@ export interface Project {
   teamSize: string;
   skills: string[];
   link?: string;
+  type?: string[];
+  description?: string;
+  features?: string[];
+  role?: string;
+  details?: ProjectDetail[];
 }
 
 export interface Skill {
