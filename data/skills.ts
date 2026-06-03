@@ -86,7 +86,7 @@ export const skills: SkillCategory[] = [
       },
       {
         name: 'React-Hook-Form',
-        iconSrc: '/icons/ic-storybook.svg',
+        iconSrc: '/icons/ic-rhf.svg',
       },
       {
         name: 'ESLint',

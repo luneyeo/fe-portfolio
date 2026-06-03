@@ -59,7 +59,7 @@ export default function ProjectCard({
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
-          {skills.map((skill) => (
+          {skills.slice(0, 4).map((skill) => (
             <SkillBadge key={skill} name={skill} />
           ))}
         </div>

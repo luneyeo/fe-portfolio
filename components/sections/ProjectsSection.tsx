@@ -19,7 +19,7 @@ export default function ProjectsSection() {
       <SectionTitle
         title="프로젝트"
         subTitle="PROJECTS"
-        descrpition="더보기를 클릭하여 프로젝트 상세를 확인해보세요"
+        descrpition="카드를 클릭하여 프로젝트 상세를 확인해보세요"
       />
       <div className="mx-auto flex w-225 flex-col gap-11">
         {projects.map((project) => (

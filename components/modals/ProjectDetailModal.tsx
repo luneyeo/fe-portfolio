@@ -1,16 +1,45 @@
 import type { Project } from '@/types';
 import Badge from '../common/Badge';
 import IcCheck from '../ui/icons/IcCheck';
+import { ReactNode } from 'react';
+import IcGithub from '../ui/icons/IcGithub';
+import IcCalendar from '../ui/icons/IcCalendar';
+import IcUser from '../ui/icons/IcUser';
+import IcCode from '../ui/icons/IcCode';
 
 interface ProjectDetailModalProps {
   project: Project;
 }
 
-function SectionHeading({ label }: { label: string }) {
+function SectionBlock({
+  label,
+  children,
+}: {
+  label: string;
+  children: ReactNode;
+}) {
   return (
-    <div className="flex items-center gap-2">
-      <span className="h-4 w-0.5 bg-gray-500" />
-      <span className="typo-16-regular">{label}</span>
+    <div className="flex flex-col gap-4">
+      <div className="flex items-center gap-2">
+        <span className="h-4 w-0.5 bg-blue-500" />
+        <h3 className="typo-18-regular">{label}</h3>
+      </div>
+      {children}
+    </div>
+  );
+}
+
+function DetailHeading({
+  label,
+  children,
+}: {
+  label: string;
+  children: ReactNode;
+}) {
+  return (
+    <div className="flex flex-col">
+      <p className="typo-14-medium text-gray-500">{label}</p>
+      {children}
     </div>
   );
 }
@@ -18,40 +47,119 @@ function SectionHeading({ label }: { label: string }) {
 export default function ProjectDetailModal({
   project,
 }: ProjectDetailModalProps) {
+  const {
+    types,
+    name,
+    subTitle,
+    period,
+    skills,
+    role,
+    links,
+    description,
+    features,
+    details,
+  } = project;
   return (
     <div className="flex flex-col gap-8 pr-6">
-      {/* 프로젝트 타입, 제목, 서브 타이틀 */}
+      {/* 상단 영역 */}
       <div className="flex flex-col gap-4 border-b border-gray-800 pb-8">
         <div className="flex gap-2">
-          {project.type &&
-            project.type.map((type) => {
+          {types &&
+            types.map((type) => {
               return <Badge name={type} variant="type" key={type} />;
             })}
         </div>
-        <div>
-          <h2 className="typo-30-bold">{project.name}</h2>
+        <div className="mb-4">
+          <h2 className="typo-30-bold">{name}</h2>
           <p className="typo-16-regular leading-relaxed text-gray-400">
-            {project.subTitle}
+            {subTitle}
           </p>
         </div>
-        {/* 스킬, 링크 연결, 제작 기간, 역할 추가 */}
+
+        {/* 제작 기간, 역할 */}
+        <div className="flex flex-col gap-4">
+          {/* 제작 기간 */}
+          <div className="flex gap-3">
+            <div className="bg-primary-700 h-11 w-11 rounded-xl p-3">
+              <IcCalendar />
+            </div>
+            <DetailHeading label="제작 기간">
+              {period && (
+                <p className="typo-14-regular text-gray-200">{period}</p>
+              )}
+            </DetailHeading>
+          </div>
+
+          {/* 역할 */}
+          <div className="flex gap-3">
+            <div className="bg-primary-700 h-11 w-11 rounded-xl p-3">
+              <IcUser />
+            </div>
+            <DetailHeading label="역할">
+              {role && <p className="typo-14-regular text-gray-200">{role}</p>}
+            </DetailHeading>
+          </div>
+
+          {/* 기술 스택 */}
+          <div className="flex gap-3">
+            <div className="bg-primary-700 h-11 w-11 rounded-xl p-3">
+              <IcCode className="h-5 w-5" />
+            </div>
+            <DetailHeading label="기술 스택">
+              {skills && (
+                <p className="typo-14-regular leading-relaxed text-gray-200">
+                  {skills.map((skill, i) => (
+                    <span key={skill}>
+                      {skill}
+                      {i < skills.length - 1 ? ', ' : ''}
+                    </span>
+                  ))}
+                </p>
+              )}
+            </DetailHeading>
+          </div>
+        </div>
+
+        {/* 프로젝트 링크 버튼 */}
+        <div className="mt-3 flex gap-5">
+          {links && (
+            <>
+              <a
+                href={links[0].url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="typo-12-regular flex w-full items-center justify-center gap-0.5 rounded-lg bg-blue-500 py-3 hover:bg-blue-600"
+              >
+                프로젝트 바로가기
+                <span>↗</span>
+              </a>
+              <a
+                href={links[1].url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="typo-12-regular hover:bg-primary-400 bg-primary-700 flex w-full items-center justify-center gap-2 rounded-lg border border-gray-700 py-3"
+              >
+                <IcGithub />
+                GitHub
+              </a>
+            </>
+          )}
+        </div>
       </div>
 
       {/* 주요 기능, 상세 내용 */}
       <div className="flex flex-col gap-10">
-        {project.description && (
-          <div className="flex flex-col gap-4">
-            <SectionHeading label="프로젝트 소개" />
+        {description && (
+          <SectionBlock label="프로젝트 소개">
             <p className="typo-14-regular leading-relaxed text-gray-300">
-              {project.description}
+              {description}
             </p>
-          </div>
+          </SectionBlock>
         )}
-        {project.features && project.features.length > 0 && (
-          <div className="flex flex-col gap-4">
-            <SectionHeading label="주요 기능" />
+        {features && features.length > 0 && (
+          <SectionBlock label="주요 기능">
             <ul className="flex flex-col gap-1.5">
-              {project.features.map((feature, i) => (
+              {features.map((feature, i) => (
                 <li
                   key={i}
                   className="typo-14-regular flex items-center gap-2 text-gray-300"
@@ -64,23 +172,31 @@ export default function ProjectDetailModal({
                 </li>
               ))}
             </ul>
-          </div>
+          </SectionBlock>
         )}
-
-        {project.details &&
-          project.details.length > 0 &&
-          project.details[0].title && (
-            <>
-              {project.details.map((detail, i) => (
-                <div key={i} className="flex flex-col gap-4">
-                  <SectionHeading label={detail.title} />
-                  <p className="typo-14-regular leading-relaxed text-gray-300">
-                    {detail.content}
-                  </p>
-                </div>
+        {details && (
+          <SectionBlock label="상세 내용">
+            <ol className="flex list-decimal flex-col gap-6 pl-5">
+              {details.map((item, i) => (
+                <li key={i} className="">
+                  <span>{item.title}</span>
+                  {item.content && (
+                    <ul className="mt-2 pl-5">
+                      {item.content.map((cont, contentIndex) => (
+                        <li
+                          key={contentIndex}
+                          className="typo-14-regular list-disc leading-relaxed text-gray-300"
+                        >
+                          {cont}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
               ))}
-            </>
-          )}
+            </ol>
+          </SectionBlock>
+        )}
       </div>
     </div>
   );
