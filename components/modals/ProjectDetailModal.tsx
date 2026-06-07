@@ -58,26 +58,30 @@ export default function ProjectDetailModal({
     description,
     features,
     details,
+    troubleshooting,
   } = project;
   return (
     <div className="flex flex-col gap-8 pr-6">
       {/* 상단 영역 */}
-      <div className="flex flex-col gap-4 border-b border-gray-800 pb-8">
-        <div className="flex gap-2">
-          {types &&
-            types.map((type) => {
-              return <Badge name={type} variant="type" key={type} />;
-            })}
-        </div>
-        <div className="mb-4">
-          <h2 className="typo-30-bold">{name}</h2>
-          <p className="typo-16-regular leading-relaxed text-gray-400">
-            {subTitle}
-          </p>
+      <div className="flex flex-col gap-6 border-b border-gray-800 pb-8">
+        {/* 프로젝트 타입 뱃지, 타이틀 역역 */}
+        <div className="">
+          <div className="mb-2 flex gap-2">
+            {types &&
+              types.map((type) => {
+                return <Badge name={type} variant="type" key={type} />;
+              })}
+          </div>
+          <div className="mb-4">
+            <h2 className="typo-30-bold">{name}</h2>
+            <p className="typo-16-regular leading-relaxed text-gray-400">
+              {subTitle}
+            </p>
+          </div>
         </div>
 
         {/* 제작 기간, 역할 */}
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-5">
           {/* 제작 기간 */}
           <div className="flex gap-3">
             <div className="bg-primary-700 h-11 w-11 rounded-xl p-3">
@@ -107,14 +111,11 @@ export default function ProjectDetailModal({
             </div>
             <DetailHeading label="기술 스택">
               {skills && (
-                <p className="typo-14-regular leading-relaxed text-gray-200">
+                <div className="mt-2 flex flex-wrap gap-1.5">
                   {skills.map((skill, i) => (
-                    <span key={skill}>
-                      {skill}
-                      {i < skills.length - 1 ? ', ' : ''}
-                    </span>
+                    <Badge key={i} name={skill} />
                   ))}
-                </p>
+                </div>
               )}
             </DetailHeading>
           </div>
@@ -151,7 +152,7 @@ export default function ProjectDetailModal({
       <div className="flex flex-col gap-10">
         {description && (
           <SectionBlock label="프로젝트 소개">
-            <p className="typo-14-regular leading-relaxed text-gray-300">
+            <p className="typo-14-regular leading-relaxed whitespace-pre-line text-gray-300">
               {description}
             </p>
           </SectionBlock>
@@ -179,6 +180,29 @@ export default function ProjectDetailModal({
             <ol className="flex list-decimal flex-col gap-6 pl-5">
               {details.map((item, i) => (
                 <li key={i} className="">
+                  <span>{item.title}</span>
+                  {item.content && (
+                    <ul className="mt-2 pl-5">
+                      {item.content.map((cont, contentIndex) => (
+                        <li
+                          key={contentIndex}
+                          className="typo-14-regular list-disc leading-relaxed text-gray-300"
+                        >
+                          {cont}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ))}
+            </ol>
+          </SectionBlock>
+        )}
+        {troubleshooting && (
+          <SectionBlock label="트러블 슈팅">
+            <ol className="flex list-decimal flex-col gap-6 pl-5">
+              {troubleshooting.map((item, i) => (
+                <li key={i}>
                   <span>{item.title}</span>
                   {item.content && (
                     <ul className="mt-2 pl-5">

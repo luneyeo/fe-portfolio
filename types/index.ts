@@ -12,6 +12,12 @@ export interface Education {
   detail: string;
 }
 
+export interface Certificate {
+  year: string;
+  name: string;
+  description: string;
+}
+
 export interface ProjectDetail {
   title: string;
   content: string[];
@@ -35,6 +41,7 @@ export interface Project {
   features?: string[];
   role?: string;
   details?: ProjectDetail[];
+  troubleshooting?: ProjectDetail[];
 }
 
 export interface Skill {

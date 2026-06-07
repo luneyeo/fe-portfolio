@@ -1,3 +1,4 @@
+import AnimateOnView from '../common/AnimateOnView';
 import SectionTitle from '../common/SectionTitle';
 import SkillCard from '../common/SkillCard';
 import { skills } from '@/data/skills';
@@ -15,7 +16,7 @@ export default function SkillsSection() {
       />
       <div className="flex flex-col gap-14">
         {skills.map(({ label, LabelIcon, variant, items }) => (
-          <div key={label} className="">
+          <AnimateOnView key={label}>
             <div className="mb-5 flex items-center gap-2">
               <LabelIcon className="text-blue-500" />
               <p className="typo-18-medium">{label}</p>
@@ -27,7 +28,7 @@ export default function SkillsSection() {
                 <SkillCard key={skill.name} variant={variant} {...skill} />
               ))}
             </div>
-          </div>
+          </AnimateOnView>
         ))}
       </div>
     </section>
