@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import SkillBadge from './Badge';
+import Badge from './Badge';
 import IcAdd from '@/components/ui/icons/IcAdd';
 import { cn } from '@/utils/cn';
 
@@ -27,8 +27,8 @@ export default function ProjectCard({
     <div
       onClick={onMoreClick}
       className={cn(
-        'bg-primary-800 group flex h-86.5 w-full cursor-pointer gap-8 overflow-hidden rounded-4xl border border-gray-800 p-7.5',
-        'transition-transform duration-300 ease-out hover:-translate-y-1.5'
+        'flex h-86.5 w-full cursor-pointer gap-8 overflow-hidden rounded-4xl p-7.5',
+        'shadow-[0_8px_28px_rgba(0,0,0,0.2)] transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-[0_16px_30px_rgba(0,0,0,0.2)]'
       )}
     >
       <div className="relative w-96 shrink-0">
@@ -40,27 +40,27 @@ export default function ProjectCard({
         />
       </div>
       <div className="relative flex flex-1 flex-col justify-end gap-3.5 py-3">
-        <span className="typo-14-regular absolute top-0 right-3 flex items-center gap-1 text-gray-400 group-hover:text-white">
+        <span className="typo-14-medium absolute top-0 right-3 flex items-center gap-1">
           더보기 <IcAdd />
         </span>
         <div className="mb-3 flex flex-col">
-          <p className="typo-14-regular text-gray-400">{subTitle}</p>
-          <h3 className="typo-24-semibold">{name}</h3>
+          <p className="typo-14-medium text-gray-600">{subTitle}</p>
+          <h3 className="typo-24-bold">{name}</h3>
         </div>
         <div className="flex flex-col gap-1">
           <p className="typo-14-medium">
             제작 기간&nbsp;&nbsp;
-            <span className="typo-14-regular text-gray-300">{period}</span>
+            <span className="text-gray-600">{period}</span>
           </p>
 
           <p className="typo-14-medium">
             참여 인원&nbsp;&nbsp;
-            <span className="typo-14-regular text-gray-300">{teamSize}</span>
+            <span className="text-gray-600">{teamSize}</span>
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
           {skills.slice(0, 4).map((skill) => (
-            <SkillBadge key={skill} name={skill} />
+            <Badge key={skill} name={skill} />
           ))}
         </div>
       </div>

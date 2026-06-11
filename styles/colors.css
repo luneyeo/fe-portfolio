@@ -1,38 +1,34 @@
 @theme {
-  --color-primary-100: #c5cad9;
-  --color-primary-200: #a6abbd;
-  --color-primary-300: #9397a6;
-  --color-primary-400: #636775;
-  --color-primary-500: #4f5361;
-  --color-primary-600: #3a3f4d;
-  --color-primary-700: #232833;
-  --color-primary-800: #1b1f2a;
-  --color-primary-900: #10141f;
+  --color-ink: #15160f;
 
-  --color-blue-500: #4490f9;
+  --color-blue-300: #30a7e9;
+  --color-blue-400: #00ace5;
+  --color-blue-500: #00a2f2;
+  --color-blue-600: #0082d3;
 
-  /* === LIGHT TOKENS ===
-  --color-primary-100: #e6eeff;
-  --color-primary-200: #b3ccff;
-  --color-primary-300: #80aaff;
-  --color-primary-400: #4d88ff;
-  --color-primary-500: #0052ff;
-  --color-primary-600: #0047e6;
-  --color-primary-700: #003bcc;
-  --color-primary-800: #002fb3;
-  --color-primary-900: #002399;
+  --color-lime-400: #bffa26; /* 메인 브랜드 색상 */
+  --color-lime-200: #e4fb78;
+  --color-olive-500: #7c9e48;
+  --color-teal-400: #2dd2cd;
 
-  --color-blue-600: #3636f0;
-  --color-blue-500: #3b82f6;
-  --color-blue-400: #6060f0;
-  --color-blue-300: #8686ec;
-  --color-blue-200: #acaef2;
-  --color-blue-100: #c8caf6;
-  --color-blue-50: #e4e5fb;
-  === TOKENS END === */
+  --color-gray-50: #f8f8f8;
+  --color-gray-100: #f0f0ee;
+  --color-gray-200: #e2e2df;
+  --color-gray-300: #c9c9c5;
+  --color-gray-400: #a8a8a3;
+  --color-gray-500: #8a8a84;
+  --color-gray-600: #6b6b65;
+  --color-gray-700: #52524c;
+  --color-gray-800: #3a3a35;
+  --color-gray-900: #262621;
+  --color-gray-950: #15160f;
+}
+
+/* @theme {
+
 
   --color-gray-25: #f8f8f8;
-  --color-gray-50: #edeef2;
+  --color-gray-50: #edeef2;  
   --color-gray-100: #e0e0e5;
   --color-gray-200: #c6c8cf;
   --color-gray-300: #b3b4bc;
@@ -46,4 +42,16 @@
 
   --color-black: #000000;
   --color-white: #ffffff;
-}
+} */
+
+/* --color-primary-100: #c5cad9;
+  --color-primary-200: #a6abbd;
+  --color-primary-300: #9397a6;
+  --color-primary-400: #636775;
+  --color-primary-500: #4f5361;
+  --color-primary-600: #3a3f4d;
+  --color-primary-700: #232833;
+  --color-primary-800: #1b1f2a;
+  --color-primary-900: #10141f;
+
+  --color-blue-500: #4490f9; */

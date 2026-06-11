@@ -1,14 +1,8 @@
 import Footer from '@/components/ui/Footer';
 import Header from '@/components/ui/Header';
 import '@/styles/globals.css';
-import { Archivo_Black, Noto_Sans_KR } from 'next/font/google';
+import { Archivo_Black } from 'next/font/google';
 import React from 'react';
-
-const notoSansKR = Noto_Sans_KR({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-noto-sans-kr',
-});
 
 const archivoBlack = Archivo_Black({
   subsets: ['latin'],
@@ -22,13 +16,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="ko"
-      className={`${notoSansKR.variable} ${archivoBlack.variable}`}
-    >
+    <html lang="ko" className={`${archivoBlack.variable}`}>
       <body>
         <Header />
-        <main className="mb-40 flex flex-col gap-34">{children}</main>
+        <main className="mb-40 flex flex-col">{children}</main>
         <Footer />
         <div id="modal-root" />
       </body>

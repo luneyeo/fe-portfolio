@@ -3,19 +3,25 @@ export interface Experience {
   company: string;
   role: string;
   position: string;
+  status?: string;
   tasks: string[];
+  skills?: string[];
 }
 
 export interface Education {
   period: string;
   institution: string;
   detail: string;
+  status?: string;
+  tasks?: string[];
+  skills?: string[];
 }
 
 export interface Certificate {
   year: string;
   name: string;
   description: string;
+  issuer?: string;
 }
 
 export interface ProjectDetail {

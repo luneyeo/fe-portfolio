@@ -17,23 +17,23 @@ export default function SkillCard({
 }: SkillCardProps) {
   if (variant === 'compact') {
     return (
-      <div className="bg-primary-800 hover:bg-primary-700 flex items-center justify-center gap-2 rounded-xl border border-gray-800 p-3 transition-transform duration-200 ease-out will-change-transform hover:scale-105">
+      <div className="flex items-center justify-center gap-2 rounded-xl border border-gray-200 bg-gray-50 p-3 transition-transform duration-200 ease-out will-change-transform hover:scale-105">
         <div className="relative size-6 shrink-0 overflow-hidden">
           <Image className="object-contain" src={iconSrc} alt={iconAlt} fill />
         </div>
-        <span className="typo-14-regular">{name}</span>
+        <span className="typo-14-medium">{name}</span>
       </div>
     );
   }
 
   return (
-    <div className="bg-primary-800 hover:bg-primary-700 flex items-center gap-4 rounded-2xl border border-gray-800 p-4 transition-transform duration-200 ease-out will-change-transform hover:scale-103">
+    <div className="flex items-center gap-4 rounded-2xl border border-gray-200 bg-gray-50 p-4 transition-transform duration-200 ease-out will-change-transform hover:scale-103">
       <div className="relative size-10 shrink-0 overflow-hidden">
         <Image className="object-contain" src={iconSrc} alt={iconAlt} fill />
       </div>
       <div className="flex flex-col gap-1">
-        <span className="typo-16-regular">{name}</span>
-        <p className="typo-13-regular text-gray-500">{description}</p>
+        <span className="typo-16-medium">{name}</span>
+        <p className="typo-13-medium text-gray-500">{description}</p>
       </div>
     </div>
   );

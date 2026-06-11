@@ -1,42 +1,49 @@
 import { certificates, educations, experiences } from '@/data/experiences';
-import ExperienceItem from '../common/ExperienceItem';
-import EducationItem from '../common/EducationItem';
 import CertificateItem from '../common/CertificateItem';
-import SectionTitle from '../common/SectionTitle';
+import EducationItem from '../common/EducationItem';
+import ExperienceItem from '../common/ExperienceItem';
 import SubSection from '../common/SubSection';
+import IcAward from '../ui/icons/IcAward';
+import IcBriefcase from '../ui/icons/IcBriefcase';
+import IcGradCap from '../ui/icons/IcGradCap';
 
 export default function ExperienceSection() {
   return (
     <section
-      className="mx-auto flex w-280 max-w-280 flex-col gap-16 px-6"
+      className="mx-auto flex w-280 max-w-280 flex-col gap-10 px-6"
       id="experience"
     >
-      <SectionTitle
-        title="경력 및 교육"
-        subTitle="EXPERIENCE"
-        descrpition="실무 경험과 교육을 통해 문제를 해결하고 성장해왔습니다."
-      />
-      <SubSection title="실무 경험">
-        <div className="flex flex-col gap-10">
+      <div className="flex items-center gap-4">
+        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-blue-500 text-white">
+          <IcBriefcase />
+        </div>
+        <div>
+          <h2 className="typo-24-bold">경험</h2>
+          <p className="typo-14-regular text-gray-500">
+            실무 경험과 교육, 자격증을 통해 지속적으로 성장해왔습니다.
+          </p>
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-6">
+        <SubSection title="실무 경험" icon={<IcBriefcase />} variant="blue">
           {experiences.map((exp) => (
             <ExperienceItem key={exp.company} {...exp} />
           ))}
-        </div>
-      </SubSection>
-      <SubSection title="교육">
-        <div className="flex flex-col gap-8">
+        </SubSection>
+
+        <SubSection title="교육" icon={<IcGradCap />} variant="olive">
           {educations.map((edu) => (
             <EducationItem key={edu.institution} {...edu} />
           ))}
-        </div>
-      </SubSection>
-      <SubSection title="자격증">
-        <div className="flex flex-col gap-8">
+        </SubSection>
+
+        <SubSection title="자격증" icon={<IcAward />} variant="gray">
           {certificates.map((cert) => (
             <CertificateItem key={cert.name} {...cert} />
           ))}
-        </div>
-      </SubSection>
+        </SubSection>
+      </div>
     </section>
   );
 }

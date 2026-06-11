@@ -14,19 +14,23 @@ export default function SkillsSection() {
         subTitle="SKILLS"
         descrpition="실제 프로젝트에서 사용하고 경험한 기술들입니다."
       />
-      <div className="flex flex-col gap-14">
+      <div className="flex flex-col gap-2 rounded-3xl bg-gray-100 p-2">
         {skills.map(({ label, LabelIcon, variant, items }) => (
           <AnimateOnView key={label}>
-            <div className="mb-5 flex items-center gap-2">
-              <LabelIcon className="text-blue-500" />
-              <p className="typo-18-medium">{label}</p>
-            </div>
-            <div
-              className={`grid gap-5 ${variant === 'compact' ? 'grid-cols-5' : 'grid-cols-3'}`}
-            >
-              {items.map((skill) => (
-                <SkillCard key={skill.name} variant={variant} {...skill} />
-              ))}
+            <div className="rounded-3xl bg-white p-6">
+              <div className="mb-5 flex items-center gap-2">
+                <div className="flex size-8 items-center justify-center rounded-lg bg-lime-400">
+                  <LabelIcon />
+                </div>
+                <p className="typo-20-bold">{label}</p>
+              </div>
+              <div
+                className={`grid gap-5 ${variant === 'compact' ? 'grid-cols-5' : 'grid-cols-3'}`}
+              >
+                {items.map((skill) => (
+                  <SkillCard key={skill.name} variant={variant} {...skill} />
+                ))}
+              </div>
             </div>
           </AnimateOnView>
         ))}

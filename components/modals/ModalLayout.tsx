@@ -24,23 +24,23 @@ export default function ModalLayout({ onClose, children }: ModalLayoutProps) {
 
   return createPortal(
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-black/60 px-6"
+      className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-black/50 px-6"
       onClick={onClose}
     >
       <div
-        className="bg-primary-800 relative h-162.5 w-full max-w-3xl overflow-hidden rounded-3xl border border-gray-800"
+        className="relative h-162.5 w-full max-w-5xl overflow-hidden rounded-3xl bg-gray-50"
         onClick={(e) => e.stopPropagation()}
       >
         <button
           type="button"
           onClick={onClose}
           className={cn(
-            'absolute top-5 right-5 flex size-8 cursor-pointer items-center justify-center rounded-full text-gray-400',
-            'transition-colors hover:bg-gray-800 hover:text-white'
+            'text-ink absolute top-5 right-5 flex size-8 cursor-pointer items-center justify-center rounded-full',
+            'bg-gray-100 transition-colors hover:bg-blue-600 hover:text-white'
           )}
           aria-label="닫기"
         >
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
             <path
               d="M2 2L14 14M14 2L2 14"
               stroke="currentColor"

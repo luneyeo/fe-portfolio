@@ -40,7 +40,7 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-primary-900 sticky top-0 z-50 h-18 border-b border-gray-400">
+    <header className="sticky top-0 z-50 h-18 border-b border-gray-400 bg-gray-950">
       <div className="mx-auto flex h-full w-280 max-w-280 items-center justify-between px-6">
         <div className="h-9 w-9 rounded-full bg-gray-200" />
         <nav className="flex items-center gap-6">

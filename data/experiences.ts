@@ -11,6 +11,7 @@ export const experiences: Experience[] = [
       '수집된 행동 데이터 기반의 온사이트 캠페인 기획 및 타겟팅 최적화를 통해 클릭률(CTR) 15~25%, 전환율 5~10% 개선',
       'AMPscript 기반의 동적 콘텐츠 제어로 멀티 채널(Email, SMS, 알림톡) 메시징 시스템을 구축하여 캠페인 실행 시간 단축 및 업무 효율성 향상',
     ],
+    skills: ['JavaScript', 'AMPscript', 'HTML', 'CSS', 'Salesforce MC'],
   },
 ];
 
@@ -19,11 +20,23 @@ export const educations: Education[] = [
     period: '2025. 11 ~ 2026. 05',
     institution: '코드잇 스프린트',
     detail: '프론트엔드 부트캠프 22기',
+    status: '수료',
+    tasks: [
+      'JavaScript, TypeScript 기반의 컴포넌트 설계 및 실전 프로젝트 구현',
+      'React, Next.js를 활용한 웹 애플리케이션 개발 및 팀 협업 경험',
+    ],
+    skills: ['JavaScript', 'TypeScript', 'React', 'Next.js', 'Git'],
   },
   {
     period: '2015. 03 ~ 2019. 02',
     institution: '순천대학교',
-    detail: '영상디자인학과 졸업',
+    detail: '영상디자인학과',
+    status: '졸업',
+    tasks: [
+      '영상디자인 이론 및 실무 프로젝트를 통한 시각 커뮤니케이션 역량 습득',
+      'UI/UX 기초 이해 및 웹 디자인 실무 도구 활용 능력 향상',
+    ],
+    skills: ['Photoshop', 'Illustrator', 'Figma'],
   },
 ];
 
@@ -32,10 +45,12 @@ export const certificates: Certificate[] = [
     year: '2025',
     name: 'SQLD (SQL Developer)',
     description: '데이터베이스 구조 이해 및 SQL 활용 경험',
+    issuer: '한국데이터산업진흥원',
   },
   {
     year: '2023',
     name: '웹디자인기능사',
     description: 'UI/UX 및 웹 디자인 기초 이해',
+    issuer: '한국산업인력공단',
   },
 ];

@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Pretendard';
+  src: url('/fonts/Pretendard/PretendardVariable.woff2')
+    format('woff2-variations');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
 @theme {
   --font-archivo: var(--font-archivo-black);
 

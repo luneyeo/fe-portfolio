@@ -8,15 +8,17 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <AnimateOnView>
-        <SkillsSection />
-      </AnimateOnView>
-      <AnimateOnView>
-        <ProjectsSection />
-      </AnimateOnView>
-      <AnimateOnView>
-        <ExperienceSection />
-      </AnimateOnView>
+      <div className="relative z-10 flex flex-col gap-40 rounded-t-4xl bg-white pt-40">
+        <AnimateOnView>
+          <SkillsSection />
+        </AnimateOnView>
+        <AnimateOnView>
+          <ProjectsSection />
+        </AnimateOnView>
+        <AnimateOnView>
+          <ExperienceSection />
+        </AnimateOnView>
+      </div>
     </>
   );
 }

@@ -1,52 +1,61 @@
-'use client';
-
-import { useState } from 'react';
-import IcChevronDown from '../ui/icons/IcChevronDown';
+import type { Experience } from '@/types';
 
 export default function ExperienceItem({
   period,
-  company,
   role,
+  company,
   position,
+  status,
   tasks,
-}: {
-  period: string;
-  company: string;
-  role: string;
-  position: string;
-  tasks: string[];
-}) {
-  const [open, setOpen] = useState(false);
-
+  skills,
+}: Experience) {
   return (
-    <div className="flex gap-10">
-      <p className="typo-16-regular shrink-0">{period}</p>
-      <div className="flex flex-col gap-1">
-        <span className="typo-18-medium">{company}</span>
-        <p className="typo-14-regular text-gray-500">
-          {role} / {position}
-        </p>
-        <button
-          className="typo-14-regular mt-2 flex cursor-pointer items-center text-left text-gray-500 hover:text-gray-200"
-          onClick={() => setOpen((prev) => !prev)}
-        >
-          <IcChevronDown
-            className={`transition-transform duration-200 ${open ? 'rotate-0' : '-rotate-90'}`}
-          />
-          <span>업무 내용 보기</span>
-        </button>
-        {open && (
-          <ul className="bg-primary-800 mt-2 flex min-w-150 flex-col gap-4 rounded-lg border border-gray-800 px-6 py-5">
+    <div className="relative py-7 first:pt-0 last:pb-0">
+      <div className="absolute top-7 -left-[5px] h-2.5 w-2.5 rounded-full bg-blue-500 first:top-0" />
+      <div className="flex gap-6">
+        <p className="typo-13-medium w-44 shrink-0 text-blue-500">{period}</p>
+        <div className="flex min-w-0 flex-1 flex-col gap-2">
+          <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+            <span className="typo-16-semibold text-gray-900">{role}</span>
+            <span className="text-gray-300">|</span>
+            <span className="typo-14-regular text-gray-600">{company}</span>
+            {position && (
+              <>
+                <span className="text-gray-300">·</span>
+                <span className="typo-13-regular text-gray-500">
+                  {position}
+                </span>
+              </>
+            )}
+            {status && (
+              <span className="typo-12-medium rounded-full bg-blue-500/10 px-2.5 py-0.5 text-blue-500">
+                {status}
+              </span>
+            )}
+          </div>
+          <ul className="flex flex-col gap-1">
             {tasks.map((task) => (
               <li
                 key={task}
-                className="typo-14-regular flex items-center gap-2 text-gray-200"
+                className="typo-13-regular flex gap-1.5 text-gray-600"
               >
-                <span className="text-gray-200">•</span>
-                {task}
+                <span className="mt-0.5 shrink-0">•</span>
+                <span>{task}</span>
               </li>
             ))}
           </ul>
+        </div>
+        {skills && skills.length > 0 && (
+          <div className="flex w-52 shrink-0 flex-wrap content-start gap-1.5">
+            {skills.map((skill) => (
+              <span
+                key={skill}
+                className="typo-12-regular rounded-full border border-gray-200 px-3 py-0.5 text-gray-600"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
         )}
       </div>
     </div>
