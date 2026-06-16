@@ -1,4 +1,5 @@
 import type { Experience } from '@/types';
+import Badge from './Badge';
 
 export default function ExperienceItem({
   period,
@@ -10,10 +11,9 @@ export default function ExperienceItem({
   skills,
 }: Experience) {
   return (
-    <div className="relative py-7 first:pt-0 last:pb-0">
-      <div className="absolute top-7 -left-[5px] h-2.5 w-2.5 rounded-full bg-blue-500 first:top-0" />
+    <div className="group relative py-5 first:pt-0 last:pb-0">
       <div className="flex gap-6">
-        <p className="typo-13-medium w-44 shrink-0 text-blue-500">{period}</p>
+        <p className="typo-13-medium w-35 shrink-0 text-gray-600">{period}</p>
         <div className="flex min-w-0 flex-1 flex-col gap-2">
           <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
             <span className="typo-16-semibold text-gray-900">{role}</span>
@@ -28,7 +28,7 @@ export default function ExperienceItem({
               </>
             )}
             {status && (
-              <span className="typo-12-medium rounded-full bg-blue-500/10 px-2.5 py-0.5 text-blue-500">
+              <span className="typo-12-regular rounded-full bg-gray-200 px-2.5 py-0.5 text-gray-500">
                 {status}
               </span>
             )}
@@ -46,14 +46,9 @@ export default function ExperienceItem({
           </ul>
         </div>
         {skills && skills.length > 0 && (
-          <div className="flex w-52 shrink-0 flex-wrap content-start gap-1.5">
+          <div className="flex w-45 shrink-0 flex-wrap content-start gap-1.5">
             {skills.map((skill) => (
-              <span
-                key={skill}
-                className="typo-12-regular rounded-full border border-gray-200 px-3 py-0.5 text-gray-600"
-              >
-                {skill}
-              </span>
+              <Badge key={skill} name={skill} variant="outline" />
             ))}
           </div>
         )}

@@ -3,6 +3,7 @@ import Badge from '../common/Badge';
 import IcCheck from '../ui/icons/IcCheck';
 import { ReactNode } from 'react';
 import IcGithub from '../ui/icons/IcGithub';
+import { cn } from '@/utils/cn';
 
 interface ProjectDetailModalProps {
   project: Project;
@@ -27,7 +28,7 @@ function DetailRow({
   return (
     <div className="flex flex-col gap-4 leading-relaxed">
       <div className="flex items-center gap-2">
-        <span className="h-4.5 w-0.75 bg-blue-600" />
+        <span className="h-4.5 w-0.75 bg-olive-500" />
         <h3 className="typo-20-bold leading-normal">{label}</h3>
       </div>
       {children}
@@ -82,7 +83,7 @@ export default function ProjectDetailModal({
                   <Badge
                     key={i}
                     name={skill}
-                    className="typo-14-regular rounded-xl border-none bg-gray-100"
+                    className="rounded-xl border-none bg-gray-100"
                   />
                 ))}
               </div>
@@ -98,7 +99,10 @@ export default function ProjectDetailModal({
                 href={links[0].url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="typo-14-regular flex w-full items-center justify-center gap-0.5 rounded-lg bg-blue-600 py-3 text-gray-50 hover:bg-blue-300"
+                className={cn(
+                  'typo-14-regular flex w-full items-center justify-center gap-0.5 rounded-lg bg-olive-500 py-3 text-gray-50',
+                  'hover:bg-lime-400 hover:text-gray-900'
+                )}
               >
                 프로젝트 바로가기
                 <span>↗</span>
@@ -133,7 +137,7 @@ export default function ProjectDetailModal({
                 <li key={i} className="typo-16-regular flex items-center gap-2">
                   <IcCheck
                     className="h-4.5 w-4.5 shrink-0"
-                    circleFill="#0082d3"
+                    circleFill="#7c9e48"
                   />
                   {feature}
                 </li>

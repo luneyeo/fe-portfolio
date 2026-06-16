@@ -36,7 +36,7 @@ export const educations: Education[] = [
       '영상디자인 이론 및 실무 프로젝트를 통한 시각 커뮤니케이션 역량 습득',
       'UI/UX 기초 이해 및 웹 디자인 실무 도구 활용 능력 향상',
     ],
-    skills: ['Photoshop', 'Illustrator', 'Figma'],
+    skills: ['Photoshop', 'Illustrator', 'Premiere', 'Cinema 4D'],
   },
 ];
 

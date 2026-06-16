@@ -28,7 +28,8 @@ export default function ProjectCard({
       onClick={onMoreClick}
       className={cn(
         'flex h-86.5 w-full cursor-pointer gap-8 overflow-hidden rounded-4xl p-7.5',
-        'shadow-[0_8px_28px_rgba(0,0,0,0.2)] transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-[0_16px_30px_rgba(0,0,0,0.2)]'
+        'shadow-[0_8px_25px_rgba(0,0,0,0.1)] transition-all duration-300 ease-out',
+        'hover:-translate-y-1.5 hover:shadow-[0_16px_30px_rgba(0,0,0,0.2)]'
       )}
     >
       <div className="relative w-96 shrink-0">
@@ -45,22 +46,22 @@ export default function ProjectCard({
         </span>
         <div className="mb-3 flex flex-col">
           <p className="typo-14-medium text-gray-600">{subTitle}</p>
-          <h3 className="typo-24-bold">{name}</h3>
+          <h3 className="typo-24-semibold">{name}</h3>
         </div>
         <div className="flex flex-col gap-1">
-          <p className="typo-14-medium">
+          <p className="typo-14-medium tracking-tight">
             제작 기간&nbsp;&nbsp;
             <span className="text-gray-600">{period}</span>
           </p>
 
-          <p className="typo-14-medium">
+          <p className="typo-14-medium tracking-tight">
             참여 인원&nbsp;&nbsp;
             <span className="text-gray-600">{teamSize}</span>
           </p>
         </div>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-1.5">
           {skills.slice(0, 4).map((skill) => (
-            <Badge key={skill} name={skill} />
+            <Badge key={skill} name={skill} variant="outline" />
           ))}
         </div>
       </div>

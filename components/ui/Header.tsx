@@ -11,6 +11,17 @@ const navItems = [
 
 export default function Header() {
   const [activeId, setActiveId] = useState<string>('');
+  const [solidBg, setSolidBg] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const skillsEl = document.getElementById('skills');
+      if (!skillsEl) return;
+      setSolidBg(skillsEl.getBoundingClientRect().top <= 232);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -33,6 +44,10 @@ export default function Header() {
   }, []);
 
   const scrollTo = (id: string) => {
+    if (id === 'about') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
     const el = document.getElementById(id);
     if (!el) return;
     const top = el.getBoundingClientRect().top + window.scrollY - (72 + 40);
@@ -40,7 +55,9 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 h-18 border-b border-gray-400 bg-gray-950">
+    <header
+      className={`sticky top-0 z-50 h-18 transition-colors duration-300 ${solidBg ? 'bg-white shadow-[0_1px_0_0_rgba(229,231,235,1)]' : 'bg-linear-to-b from-[#4C7CC9]/75 to-transparent'}`}
+    >
       <div className="mx-auto flex h-full w-280 max-w-280 items-center justify-between px-6">
         <div className="h-9 w-9 rounded-full bg-gray-200" />
         <nav className="flex items-center gap-6">
@@ -53,9 +70,9 @@ export default function Header() {
                     scrollTo(id);
                     setActiveId(id);
                   }}
-                  className={`typo-14-medium cursor-pointer text-gray-500 transition-colors hover:text-white ${
-                    activeId === id ? 'typo-14-medium text-white' : ''
-                  }`}
+                  className={`typo-14-medium cursor-pointer transition-colors hover:text-gray-700 ${
+                    activeId === id ? 'text-gray-700' : ''
+                  } ${solidBg ? 'text-gray-400' : 'text-white'} `}
                 >
                   {label}
                 </button>

@@ -13,10 +13,28 @@ export default function Badge({
 }: BadgeProps) {
   if (variant === 'type') {
     return (
-      <p className="typo-12-regular flex items-center gap-1.5 rounded-full bg-gray-900 px-3 py-1 text-gray-50">
-        <span className="inline-block h-2 w-2 rounded-full bg-blue-600"></span>
+      <p
+        className={cn(
+          'typo-12-regular flex items-center gap-1.5 rounded-full bg-gray-900 px-3 py-1 text-gray-50',
+          className
+        )}
+      >
+        <span className="inline-block h-2 w-2 rounded-full bg-lime-400"></span>
         {name}
       </p>
+    );
+  }
+
+  if (variant === 'outline') {
+    return (
+      <span
+        className={cn(
+          'typo-13-regular rounded-full border border-gray-200 px-3 py-0.5 text-gray-600',
+          className
+        )}
+      >
+        {name}
+      </span>
     );
   }
 

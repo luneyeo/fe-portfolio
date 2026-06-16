@@ -36,7 +36,7 @@ export default function ModalLayout({ onClose, children }: ModalLayoutProps) {
           onClick={onClose}
           className={cn(
             'text-ink absolute top-5 right-5 flex size-8 cursor-pointer items-center justify-center rounded-full',
-            'bg-gray-100 transition-colors hover:bg-blue-600 hover:text-white'
+            'bg-gray-100 transition-colors hover:bg-olive-500 hover:text-white'
           )}
           aria-label="닫기"
         >

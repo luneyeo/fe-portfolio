@@ -19,10 +19,10 @@ export default function SkillsSection() {
           <AnimateOnView key={label}>
             <div className="rounded-3xl bg-white p-6">
               <div className="mb-5 flex items-center gap-2">
-                <div className="flex size-8 items-center justify-center rounded-lg bg-lime-400">
+                <div className="flex size-8 items-center justify-center rounded-lg bg-olive-500 text-white">
                   <LabelIcon />
                 </div>
-                <p className="typo-20-bold">{label}</p>
+                <p className="typo-18-medium">{label}</p>
               </div>
               <div
                 className={`grid gap-5 ${variant === 'compact' ? 'grid-cols-5' : 'grid-cols-3'}`}
