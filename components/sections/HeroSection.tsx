@@ -1,3 +1,4 @@
+import IcArrowDown from '@/components/ui/icons/IcArrowDown';
 import IcGithub from '@/components/ui/icons/IcGithub';
 import IcMail from '@/components/ui/icons/IcMail';
 
@@ -25,6 +26,7 @@ export default function HeroSection() {
           </p>
         </div>
 
+        {/* 깃헙/이메일 버튼 */}
         <div className="flex items-center gap-3">
           <a
             href={GITHUB_URL}
@@ -42,6 +44,14 @@ export default function HeroSection() {
             <IcMail />
             Contact
           </a>
+        </div>
+
+        {/* 스크롤 다운 */}
+        <div className="absolute bottom-16 flex flex-col items-center gap-2 text-white">
+          <span className="typo-12-regular tracking-widest uppercase">
+            Scroll Down
+          </span>
+          <IcArrowDown className="animate-bounce" />
         </div>
       </div>
     </section>

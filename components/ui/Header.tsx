@@ -72,7 +72,7 @@ export default function Header() {
                   }}
                   className={`typo-14-medium cursor-pointer transition-colors hover:text-gray-700 ${
                     activeId === id ? 'text-gray-700' : ''
-                  } ${solidBg ? 'text-gray-400' : 'text-white'} `}
+                  } ${solidBg ? 'text-gray-400' : 'text-white hover:text-gray-900'} `}
                 >
                   {label}
                 </button>

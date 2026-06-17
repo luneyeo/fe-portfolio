@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <div className="relative z-10 flex flex-col gap-40 rounded-t-4xl bg-white pt-40">
+      <div className="relative z-10 flex flex-col gap-40 rounded-t-4xl bg-white pt-40 shadow-[0_8px_40px_rgba(0,0,0,0.6)]">
         <AnimateOnView>
           <SkillsSection />
         </AnimateOnView>
