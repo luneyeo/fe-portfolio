@@ -1,9 +1,9 @@
 'use client';
 
-import CloseIcon from '@/components/icons/CloseIcon';
 import { cn } from '@/utils/cn';
 import { ReactNode, useEffect } from 'react';
 import { createPortal } from 'react-dom';
+import IcX from '../ui/icons/IcX';
 
 interface ModalLayoutProps {
   onClose: () => void;
@@ -41,7 +41,7 @@ export default function ModalLayout({ onClose, children }: ModalLayoutProps) {
           )}
           aria-label="닫기"
         >
-          <CloseIcon />
+          <IcX />
         </button>
 
         {/* 프로젝트 상세 내용 영역 */}
