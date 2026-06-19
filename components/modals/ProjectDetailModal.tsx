@@ -53,7 +53,7 @@ export default function ProjectDetailModal({
     troubleshooting,
   } = project;
   return (
-    <div className="flex flex-col gap-8 pr-6">
+    <div className="flex flex-col gap-8 md:pr-6">
       {/* 상단 영역 */}
       <div className="flex flex-col gap-6 border-b border-gray-200 pb-8">
         {/* 프로젝트 타입 뱃지, 타이틀 역역 */}
@@ -156,7 +156,7 @@ export default function ProjectDetailModal({
                       {item.content.map((cont, contentIndex) => (
                         <li
                           key={contentIndex}
-                          className="typo-16-regular list-disc leading-loose"
+                          className="typo-16-regular list-disc md:leading-loose"
                         >
                           {cont}
                         </li>
@@ -179,7 +179,7 @@ export default function ProjectDetailModal({
                       {item.content.map((cont, contentIndex) => (
                         <li
                           key={contentIndex}
-                          className="typo-16-regular list-disc leading-loose"
+                          className="typo-16-regular list-disc md:leading-loose"
                         >
                           {cont}
                         </li>

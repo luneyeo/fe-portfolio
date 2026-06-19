@@ -1,5 +1,6 @@
 'use client';
 
+import CloseIcon from '@/components/icons/CloseIcon';
 import { cn } from '@/utils/cn';
 import { ReactNode, useEffect } from 'react';
 import { createPortal } from 'react-dom';
@@ -35,19 +36,12 @@ export default function ModalLayout({ onClose, children }: ModalLayoutProps) {
           type="button"
           onClick={onClose}
           className={cn(
-            'text-ink absolute top-5 right-5 flex size-8 cursor-pointer items-center justify-center rounded-full',
+            'text-ink absolute top-5 right-5 flex size-10 cursor-pointer items-center justify-center rounded-full md:size-8',
             'bg-gray-100 transition-colors hover:bg-olive-500 hover:text-white'
           )}
           aria-label="닫기"
         >
-          <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-            <path
-              d="M2 2L14 14M14 2L2 14"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-          </svg>
+          <CloseIcon />
         </button>
 
         {/* 프로젝트 상세 내용 영역 */}

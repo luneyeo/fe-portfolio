@@ -105,13 +105,13 @@ export default function Header() {
       {/* 모바일 메뉴 오버레이 */}
       {menuOpen && (
         <div className="fixed inset-0 z-40 flex flex-col bg-white pt-18 md:hidden">
-          <ul className="flex flex-col items-center gap-4 pt-8">
+          <ul className="flex flex-col items-center pt-8">
             {navItems.map(({ id, label }) => (
-              <li key={id}>
+              <li key={id} className="w-full py-3">
                 <button
                   type="button"
                   onClick={() => handleNavClick(id)}
-                  className={`typo-20-medium cursor-pointer transition-colors ${
+                  className={`typo-20-medium w-full cursor-pointer transition-colors ${
                     activeId === id ? 'text-gray-900' : 'text-gray-400'
                   }`}
                 >
