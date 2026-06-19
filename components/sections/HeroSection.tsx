@@ -10,10 +10,10 @@ export default function HeroSection() {
   return (
     <section id="about" className="sticky top-0 -mt-18 overflow-hidden">
       <div
-        className="relative mx-auto flex min-h-screen flex-col items-center justify-center bg-cover bg-center px-10"
+        className="relative flex min-h-screen w-full flex-col items-center justify-center bg-cover bg-center"
         style={{ backgroundImage: `url(${BG_IMAGE})` }}
       >
-        <div className="mb-10 flex flex-col text-center text-[60px] leading-16 font-bold tracking-wide text-white">
+        <div className="mb-5 flex flex-col text-center text-[36px] leading-[1.15] font-bold tracking-wide text-white md:mb-10 md:text-[50px] md:leading-[1.1] lg:text-[60px] lg:leading-16">
           <span>Thinking for</span>
           <span>Better</span>
           <span>Experiences.</span>

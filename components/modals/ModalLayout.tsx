@@ -24,11 +24,11 @@ export default function ModalLayout({ onClose, children }: ModalLayoutProps) {
 
   return createPortal(
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-black/50 px-6"
+      className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-black/50 md:px-6"
       onClick={onClose}
     >
       <div
-        className="relative h-162.5 w-full max-w-5xl overflow-hidden rounded-3xl bg-gray-50"
+        className="relative h-full w-full max-w-5xl overflow-hidden bg-gray-50 md:h-162.5 md:rounded-3xl"
         onClick={(e) => e.stopPropagation()}
       >
         <button

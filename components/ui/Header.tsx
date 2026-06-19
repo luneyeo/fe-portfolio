@@ -58,7 +58,7 @@ export default function Header() {
     <header
       className={`sticky top-0 z-50 h-18 transition-colors duration-300 ${solidBg ? 'bg-white shadow-[0_1px_0_0_rgba(229,231,235,1)]' : 'bg-linear-to-b from-[#4C7CC9]/75 to-transparent'}`}
     >
-      <div className="mx-auto flex h-full w-280 max-w-280 items-center justify-between px-6">
+      <div className="mx-0 flex h-full max-w-280 items-center justify-between px-6 lg:mx-auto lg:w-auto">
         <div className="h-9 w-9 rounded-full bg-gray-200" />
         <nav className="flex items-center gap-6">
           <ul className="flex items-center gap-4">

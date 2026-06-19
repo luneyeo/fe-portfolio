@@ -6,7 +6,7 @@ import { skills } from '@/data/skills';
 export default function SkillsSection() {
   return (
     <section
-      className="mx-auto flex w-280 max-w-280 flex-col gap-16 px-6"
+      className="mx-auto flex w-auto max-w-280 flex-col gap-10 px-6 md:gap-16"
       id="skills"
     >
       <SectionTitle
@@ -25,7 +25,7 @@ export default function SkillsSection() {
                 <p className="typo-18-medium">{label}</p>
               </div>
               <div
-                className={`grid gap-5 ${variant === 'compact' ? 'grid-cols-5' : 'grid-cols-3'}`}
+                className={`grid grid-cols-1 gap-2 lg:gap-5 ${variant === 'compact' ? 'md:grid-cols-5' : 'md:grid-cols-3'}`}
               >
                 {items.map((skill) => (
                   <SkillCard key={skill.name} variant={variant} {...skill} />

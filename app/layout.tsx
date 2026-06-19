@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="ko" className={`${archivoBlack.variable}`}>
       <body>
         <Header />
-        <main className="mb-40 flex flex-col">{children}</main>
+        <main className="flex flex-col">{children}</main>
         <Footer />
         <div id="modal-root" />
       </body>

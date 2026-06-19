@@ -11,7 +11,7 @@ import SectionTitle from '../common/SectionTitle';
 export default function ExperienceSection() {
   return (
     <section
-      className="mx-auto flex w-280 max-w-280 flex-col gap-16 px-6"
+      className="mx-auto flex w-auto max-w-280 flex-col gap-10 px-6 md:gap-16"
       id="experience"
     >
       <SectionTitle
@@ -20,7 +20,7 @@ export default function ExperienceSection() {
         descrpition="실무 경험과 교육을 통해 문제를 해결하고 성장해왔습니다"
       />
 
-      <div className="mx-auto flex flex-col gap-8">
+      <div className="flex flex-col gap-8 lg:mx-auto">
         <SubSection title="실무 경험" icon={<IcBriefcase />}>
           {experiences.map((exp) => (
             <ExperienceItem key={exp.company} {...exp} />

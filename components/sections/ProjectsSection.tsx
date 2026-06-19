@@ -13,7 +13,7 @@ export default function ProjectsSection() {
 
   return (
     <section
-      className="mx-auto flex w-280 max-w-280 flex-col gap-16 px-6"
+      className="mx-auto flex w-auto max-w-280 flex-col gap-10 px-6 md:gap-16"
       id="projects"
     >
       <SectionTitle
@@ -21,7 +21,7 @@ export default function ProjectsSection() {
         subTitle="PROJECTS"
         descrpition="카드를 클릭하여 프로젝트 상세를 확인해보세요"
       />
-      <div className="mx-auto flex w-225 flex-col gap-11">
+      <div className="flex flex-col gap-11 lg:mx-auto lg:w-225">
         {projects.map((project) => (
           <ProjectCard
             key={project.name}
