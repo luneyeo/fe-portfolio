@@ -15,7 +15,7 @@ export default function SectionTitle({
         {subTitle}
       </span>
       <h2 className="typo-24-bold md:typo-28-bold mb-0.5">{title}</h2>
-      <h3 className="typo-14-medium">{descrpition}</h3>
+      <h3 className="typo-14-medium text-center">{descrpition}</h3>
     </div>
   );
 }

@@ -7,7 +7,7 @@ const EMAIL = 'ssyeo1204@gmail.com';
 export default function Footer() {
   return (
     <footer className="border-t border-gray-800 bg-gray-900">
-      <div className="mx-auto flex w-280 max-w-280 items-center justify-between px-6 py-8">
+      <div className="mx-auto flex max-w-280 flex-col items-center justify-between gap-2 px-6 py-8 md:flex-row">
         <p className="typo-13-regular text-gray-500">© 2026 YEO Sugyeong</p>
         <div className="flex items-center gap-5">
           <a

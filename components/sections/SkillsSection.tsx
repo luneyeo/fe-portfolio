@@ -6,7 +6,7 @@ import { skills } from '@/data/skills';
 export default function SkillsSection() {
   return (
     <section
-      className="mx-auto flex w-auto max-w-280 flex-col gap-10 px-6 md:gap-16"
+      className="mx-auto flex w-auto max-w-280 flex-col gap-10 px-4.5 md:gap-16 md:px-6"
       id="skills"
     >
       <SectionTitle
@@ -17,7 +17,7 @@ export default function SkillsSection() {
       <div className="flex flex-col gap-2 rounded-3xl bg-gray-100 p-2">
         {skills.map(({ label, LabelIcon, variant, items }) => (
           <AnimateOnView key={label}>
-            <div className="rounded-3xl bg-white p-6">
+            <div className="rounded-3xl bg-white p-4 md:p-6">
               <div className="mb-5 flex items-center gap-2">
                 <div className="flex size-8 items-center justify-center rounded-lg bg-olive-500 text-white">
                   <LabelIcon />

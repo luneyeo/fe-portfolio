@@ -11,7 +11,7 @@ import SectionTitle from '../common/SectionTitle';
 export default function ExperienceSection() {
   return (
     <section
-      className="mx-auto flex w-auto max-w-280 flex-col gap-10 px-6 md:gap-16"
+      className="mx-auto flex w-auto max-w-280 flex-col gap-10 px-4.5 md:gap-16 md:px-6"
       id="experience"
     >
       <SectionTitle

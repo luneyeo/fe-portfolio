@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import IcMenu from './icons/IcMenu';
+import IcX from './icons/IcX';
 
 const navItems = [
   { id: 'about', label: 'About' },
@@ -12,6 +14,7 @@ const navItems = [
 export default function Header() {
   const [activeId, setActiveId] = useState<string>('');
   const [solidBg, setSolidBg] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,33 +57,71 @@ export default function Header() {
     window.scrollTo({ top, behavior: 'smooth' });
   };
 
+  const handleNavClick = (id: string) => {
+    scrollTo(id);
+    setActiveId(id);
+    setMenuOpen(false);
+  };
+
   return (
-    <header
-      className={`sticky top-0 z-50 h-18 transition-colors duration-300 ${solidBg ? 'bg-white shadow-[0_1px_0_0_rgba(229,231,235,1)]' : 'bg-linear-to-b from-[#4C7CC9]/75 to-transparent'}`}
-    >
-      <div className="mx-0 flex h-full max-w-280 items-center justify-between px-6 lg:mx-auto lg:w-auto">
-        <div className="h-9 w-9 rounded-full bg-gray-200" />
-        <nav className="flex items-center gap-6">
-          <ul className="flex items-center gap-4">
+    <>
+      <header
+        className={`sticky top-0 z-50 h-18 transition-colors duration-300 ${solidBg ? 'bg-white shadow-[0_1px_0_0_rgba(229,231,235,1)]' : ''}`}
+      >
+        <div className="mx-0 flex h-full max-w-280 items-center justify-between px-6 lg:mx-auto lg:w-auto">
+          <div className="h-9 w-9 rounded-full bg-gray-200" />
+
+          {/* 데스크탑 nav */}
+          <nav className="hidden items-center gap-6 md:flex">
+            <ul className="flex items-center gap-4">
+              {navItems.map(({ id, label }) => (
+                <li key={id} className="flex">
+                  <button
+                    type="button"
+                    onClick={() => handleNavClick(id)}
+                    className={`typo-14-medium cursor-pointer transition-colors hover:text-gray-700 ${
+                      activeId === id ? 'text-gray-700' : ''
+                    } ${solidBg ? 'text-gray-400' : 'text-white hover:text-gray-900'}`}
+                  >
+                    {label}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          {/* 모바일 햄버거 버튼 */}
+          <button
+            type="button"
+            className={`cursor-pointer md:hidden ${solidBg ? 'text-gray-600' : ''}`}
+            onClick={() => setMenuOpen((prev) => !prev)}
+            aria-label="메뉴 열기"
+          >
+            {menuOpen ? <IcX /> : <IcMenu />}
+          </button>
+        </div>
+      </header>
+
+      {/* 모바일 메뉴 오버레이 */}
+      {menuOpen && (
+        <div className="fixed inset-0 z-40 flex flex-col bg-white pt-18 md:hidden">
+          <ul className="flex flex-col items-center gap-4 pt-8">
             {navItems.map(({ id, label }) => (
-              <li key={id} className="flex">
+              <li key={id}>
                 <button
                   type="button"
-                  onClick={() => {
-                    scrollTo(id);
-                    setActiveId(id);
-                  }}
-                  className={`typo-14-medium cursor-pointer transition-colors hover:text-gray-700 ${
-                    activeId === id ? 'text-gray-700' : ''
-                  } ${solidBg ? 'text-gray-400' : 'text-white hover:text-gray-900'} `}
+                  onClick={() => handleNavClick(id)}
+                  className={`typo-20-medium cursor-pointer transition-colors ${
+                    activeId === id ? 'text-gray-900' : 'text-gray-400'
+                  }`}
                 >
                   {label}
                 </button>
               </li>
             ))}
           </ul>
-        </nav>
-      </div>
-    </header>
+        </div>
+      )}
+    </>
   );
 }
