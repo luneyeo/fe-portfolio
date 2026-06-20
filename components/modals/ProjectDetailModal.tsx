@@ -125,9 +125,7 @@ export default function ProjectDetailModal({
       <div className="flex flex-col gap-10">
         {description && (
           <DetailRow label="프로젝트 소개">
-            <p className="typo-16-regular leading-relaxed whitespace-pre-line">
-              {description}
-            </p>
+            <p className="typo-16-regular leading-relaxed">{description}</p>
           </DetailRow>
         )}
         {features && features.length > 0 && (
@@ -156,7 +154,7 @@ export default function ProjectDetailModal({
                       {item.content.map((cont, contentIndex) => (
                         <li
                           key={contentIndex}
-                          className="typo-16-regular list-disc md:leading-loose"
+                          className="typo-16-regular list-disc tracking-tight md:leading-loose"
                         >
                           {cont}
                         </li>
@@ -169,23 +167,29 @@ export default function ProjectDetailModal({
           </DetailRow>
         )}
         {troubleshooting && (
-          <DetailRow label="트러블 슈팅">
+          <DetailRow label="개발 이슈">
             <ol className="flex list-decimal flex-col gap-6 pl-5">
               {troubleshooting.map((item, i) => (
                 <li key={i}>
                   <span>{item.title}</span>
-                  {item.content && (
-                    <ul className="mt-2 pl-5">
-                      {item.content.map((cont, contentIndex) => (
-                        <li
-                          key={contentIndex}
-                          className="typo-16-regular list-disc md:leading-loose"
-                        >
-                          {cont}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
+                  <div className="mt-3 flex flex-col gap-2">
+                    <div className="flex gap-2">
+                      <span className="typo-16-regular block min-w-8 text-red-800">
+                        에러
+                      </span>
+                      <p className="typo-16-regular shrink tracking-tight">
+                        {item.error}
+                      </p>
+                    </div>
+                    <div className="flex gap-2">
+                      <span className="typo-16-regular block min-w-8 text-olive-500">
+                        해결
+                      </span>
+                      <p className="typo-16-regular shrink tracking-tight">
+                        {item.solution}
+                      </p>
+                    </div>
+                  </div>
                 </li>
               ))}
             </ol>

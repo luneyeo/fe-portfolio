@@ -29,6 +29,12 @@ export interface ProjectDetail {
   content: string[];
 }
 
+export interface TroubleshootingItem {
+  title: string;
+  error: string;
+  solution: string;
+}
+
 export interface LinkDetail {
   label: string;
   url: string;
@@ -47,7 +53,7 @@ export interface Project {
   features?: string[];
   role?: string;
   details?: ProjectDetail[];
-  troubleshooting?: ProjectDetail[];
+  troubleshooting?: TroubleshootingItem[];
 }
 
 export interface Skill {
