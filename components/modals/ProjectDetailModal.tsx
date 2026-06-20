@@ -100,7 +100,7 @@ export default function ProjectDetailModal({
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(
-                  'typo-14-regular flex w-full items-center justify-center gap-0.5 rounded-lg bg-olive-500 py-3 text-gray-50',
+                  'typo-14-regular flex w-full items-center justify-center gap-0.5 rounded-lg bg-gray-900 py-3 text-gray-50',
                   'hover:bg-lime-400 hover:text-gray-900'
                 )}
               >

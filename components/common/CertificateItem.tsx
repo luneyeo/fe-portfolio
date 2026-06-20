@@ -9,8 +9,7 @@ export default function CertificateItem({
 }: Certificate) {
   return (
     <div className="group relative py-5 first:pt-0 last:pb-0">
-      <div className="flex flex-col gap-4 md:flex-row lg:gap-6">
-        {' '}
+      <div className="flex flex-col items-start gap-4 md:flex-row lg:gap-6">
         <p className="typo-13-medium w-20 shrink-0 text-gray-600">{year}</p>
         <div className="flex min-w-0 flex-1 flex-col gap-0.5">
           <span className="typo-16-semibold text-gray-900">{name}</span>
