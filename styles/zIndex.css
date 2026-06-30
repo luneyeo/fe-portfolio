@@ -1,0 +1,6 @@
+@theme {
+  --z-index-scroll-to-top: 20;
+  --z-index-mobile-menu: 30;
+  --z-index-header: 40;
+  --z-index-modal: 50;
+}
