@@ -36,6 +36,10 @@ function DetailRow({
   );
 }
 
+function DetailList({ children }: { children: ReactNode }) {
+  return <ol className="flex list-decimal flex-col gap-6 pl-5">{children}</ol>;
+}
+
 export default function ProjectDetailModal({
   project,
 }: ProjectDetailModalProps) {
@@ -60,9 +64,9 @@ export default function ProjectDetailModal({
         <div className="mb-3 flex flex-col gap-4">
           <div className="flex gap-2">
             {types &&
-              types.map((type) => {
-                return <Badge name={type} variant="type" key={type} />;
-              })}
+              types.map((type) => (
+                <Badge name={type} variant="type" key={type} />
+              ))}
           </div>
           <div>
             <h2 className="typo-30-bold">{name}</h2>
@@ -92,33 +96,38 @@ export default function ProjectDetailModal({
         </div>
 
         {/* 프로젝트 링크 버튼 */}
-        <div className="mt-3 flex gap-5">
-          {links && (
-            <>
-              <a
-                href={links[0].url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={cn(
-                  'typo-14-regular flex w-full items-center justify-center gap-0.5 rounded-lg bg-gray-900 py-3 text-gray-50',
-                  'hover:bg-lime-400 hover:text-gray-900'
-                )}
-              >
-                프로젝트 바로가기
-                <span>↗</span>
-              </a>
-              <a
-                href={links[1].url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="typo-12-regular flex w-full items-center justify-center gap-2 rounded-lg border border-gray-300 py-3 hover:bg-gray-100"
-              >
-                <IcGithub />
-                GitHub
-              </a>
-            </>
-          )}
-        </div>
+        {links && (
+          <div className="mt-3 flex gap-5">
+            {links.map((link) =>
+              link.label === '사이트' ? (
+                <a
+                  key={link.label}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={cn(
+                    'typo-14-regular flex w-full items-center justify-center gap-0.5 rounded-lg bg-gray-900 py-3 text-gray-50',
+                    'hover:bg-lime-400 hover:text-gray-900'
+                  )}
+                >
+                  프로젝트 바로가기
+                  <span>↗</span>
+                </a>
+              ) : (
+                <a
+                  key={link.label}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="typo-12-regular flex w-full items-center justify-center gap-2 rounded-lg border border-gray-300 py-3 hover:bg-gray-100"
+                >
+                  <IcGithub />
+                  GitHub
+                </a>
+              )
+            )}
+          </div>
+        )}
       </div>
 
       {/* 주요 기능, 상세 내용 */}
@@ -145,9 +154,9 @@ export default function ProjectDetailModal({
         )}
         {details && (
           <DetailRow label="상세 내용">
-            <ol className="flex list-decimal flex-col gap-6 pl-5">
+            <DetailList>
               {details.map((item, i) => (
-                <li key={i} className="">
+                <li key={i}>
                   <span>{item.title}</span>
                   {item.content && (
                     <ul className="mt-2 pl-5">
@@ -163,12 +172,12 @@ export default function ProjectDetailModal({
                   )}
                 </li>
               ))}
-            </ol>
+            </DetailList>
           </DetailRow>
         )}
         {troubleshooting && (
           <DetailRow label="개발 이슈">
-            <ol className="flex list-decimal flex-col gap-6 pl-5">
+            <DetailList>
               {troubleshooting.map((item, i) => (
                 <li key={i}>
                   <span>{item.title}</span>
@@ -192,7 +201,7 @@ export default function ProjectDetailModal({
                   </div>
                 </li>
               ))}
-            </ol>
+            </DetailList>
           </DetailRow>
         )}
       </div>
