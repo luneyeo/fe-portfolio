@@ -18,7 +18,7 @@ export default function ScrollToTopButton() {
       type="button"
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       aria-label="맨 위로 이동"
-      className={`z-scroll-to-top fixed right-10 bottom-10 flex size-12 cursor-pointer items-center justify-center rounded-full bg-lime-400 shadow-md transition-all duration-400 lg:right-50 lg:bottom-20 ${visible ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-4 opacity-0'}`}
+      className={`z-scroll-to-top fixed right-10 bottom-10 flex size-12 cursor-pointer items-center justify-center rounded-full bg-lime-400 shadow-md transition-all duration-400 lg:bottom-20 2xl:right-50 ${visible ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-4 opacity-0'}`}
     >
       <IcArrowDown className="rotate-180 text-black" />
     </button>

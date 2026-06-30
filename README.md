@@ -16,18 +16,18 @@
 
 ## 🛠️ 기술 스택 및 선정이유
 
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![pnpm](https://img.shields.io/badge/pnpm-F69220?style=for-the-badge&logo=pnpm&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
+![pnpm](https://img.shields.io/badge/pnpm-F69220?style=flat-square&logo=pnpm&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
 
-- **Framework**:
+- **코어**:
   Next.js 14 (App Router)
   - 초기 로딩 속도 향상(SSR) 및 포트폴리오의 SEO 최적화를 위해 채택했습니다.
 - **Language**: TypeScript
   - 명확한 타입 정의를 통해 컴포넌트 간 데이터 흐름의 안정성을 높였습니다.
-- **Styling**: Tailwind CSS
+- **스타일링**: Tailwind CSS
   - 미디어 쿼리를 통한 유연한 반응형 레이아웃 구현 및 빠른 스타일링을 위해 사용했습니다.
 
 ---
