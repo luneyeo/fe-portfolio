@@ -2,7 +2,7 @@ import { certificates, educations, experiences } from '@/data/experiences';
 import CertificateItem from '../common/CertificateItem';
 import EducationItem from '../common/EducationItem';
 import ExperienceItem from '../common/ExperienceItem';
-import SubSection from '../common/SubSection';
+import ExperienceSubSectionProps from '../common/ExperienceSubSection';
 import IcAward from '../ui/icons/IcAward';
 import IcBriefcase from '../ui/icons/IcBriefcase';
 import IcGradCap from '../ui/icons/IcGradCap';
@@ -21,23 +21,23 @@ export default function ExperienceSection() {
       />
 
       <div className="flex flex-col gap-8 lg:mx-auto">
-        <SubSection title="실무 경험" icon={<IcBriefcase />}>
+        <ExperienceSubSectionProps title="실무 경험" icon={<IcBriefcase />}>
           {experiences.map((exp) => (
             <ExperienceItem key={exp.company} {...exp} />
           ))}
-        </SubSection>
+        </ExperienceSubSectionProps>
 
-        <SubSection title="교육" icon={<IcGradCap />}>
+        <ExperienceSubSectionProps title="교육" icon={<IcGradCap />}>
           {educations.map((edu) => (
             <EducationItem key={edu.institution} {...edu} />
           ))}
-        </SubSection>
+        </ExperienceSubSectionProps>
 
-        <SubSection title="자격증" icon={<IcAward />}>
+        <ExperienceSubSectionProps title="자격증" icon={<IcAward />}>
           {certificates.map((cert) => (
             <CertificateItem key={cert.name} {...cert} />
           ))}
-        </SubSection>
+        </ExperienceSubSectionProps>
       </div>
     </section>
   );
