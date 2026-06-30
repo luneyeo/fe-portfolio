@@ -16,7 +16,11 @@
 
 ## 🛠️ 기술 스택 및 선정이유
 
-- **Framework**: Next.js 14 (App Router)
+![Next.js](https://img.shields.io/badge/Next.js-FFFFFF?style=for-the-badge&logo=nextdotjs)
+![TypeScript](https://img.shields.io/badge/TypeScript-E8F1FB?style=flat-square&logo=typescript&logoColor=3178C6)
+
+- **Framework**:
+  Next.js 14 (App Router)
   - 초기 로딩 속도 향상(SSR) 및 포트폴리오의 SEO 최적화를 위해 채택했습니다.
 - **Language**: TypeScript
   - 명확한 타입 정의를 통해 컴포넌트 간 데이터 흐름의 안정성을 높였습니다.
