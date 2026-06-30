@@ -139,4 +139,54 @@ export const projects: Project[] = [
       },
     ],
   },
+  {
+    thumbnail: '/images/img-taskify.png',
+    subTitle:
+      '프로젝트와 경험을 한눈에 확인할 수 있는 개인 포트폴리오 웹사이트',
+    name: '개인 포트폴리오 웹사이트',
+    period: '2026.05 ~ ',
+    teamSize: '1인',
+    skills: [
+      'React',
+      'Next.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'Git & Github',
+      'Vercel',
+    ],
+    types: ['개인 프로젝트', '웹/모바일'],
+    description:
+      '자신을 소개하고 프로젝트와 기술 스택, 경험을 한눈에 확인할 수 있는 개인 포트폴리오 웹사이트입니다. Next.js App Router와 TypeScript를 기반으로 구성하였으며, Tailwind CSS를 활용해 반응형 레이아웃을 직접 디자인하고 구현했습니다. 라이브러리 의존 없이 스크롤 연동 애니메이션, 모달, 햄버거 메뉴 등 UI 인터랙션을 직접 구현하여 가볍고 유지보수하기 쉬운 구조를 지향했습니다.',
+    features: [
+      '히어로/소개/스킬/경험/프로젝트 섹션 구성',
+      '프로젝트 상세 모달 (기술 스택, 트러블슈팅, 링크 등)',
+      '반응형 디자인 (모바일/태블릿/데스크탑)',
+      '스크롤 연동 헤더 및 맨 위로 이동 버튼',
+      '모바일 햄버거 메뉴 및 뷰포트 진입 시 페이드인 애니메이션',
+    ],
+    role: '기획, 디자인, 개발 전반 (1인 프로젝트)',
+    details: [
+      {
+        title: 'z-index 체계적 관리',
+        content: [
+          '헤더, 모달, 버튼 등 레이어 충돌을 방지하기 위해 용도별 z-index 값을 CSS 변수로 분리하여 관리',
+          '전역 스타일에서 일관된 레이어 우선순위를 선언함으로써 컴포넌트별 z-index 하드코딩 제거',
+        ],
+      },
+      {
+        title: 'Lighthouse',
+        content: [
+          'Lighthouse 검사 기준 접근성과 SEO 점수 100점을 목표로 시맨틱 태그 사용 및 이미지 메타태그(alt) 관리.',
+        ],
+      },
+      {
+        title: '스크롤 연동 UI 인터랙션 직접 구현',
+        content: [
+          'IntersectionObserver를 활용해 섹션이 뷰포트에 진입할 때 페이드인 애니메이션 적용',
+          '스크롤 위치에 따라 헤더 스타일 전환 및 맨 위로 이동 버튼 노출 여부 제어',
+        ],
+      },
+    ],
+    links: [{ label: '깃헙', url: 'https://github.com/luneyeo/fe-portfolio' }],
+  },
 ];
