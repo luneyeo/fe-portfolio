@@ -25,7 +25,7 @@ export default function ModalLayout({ onClose, children }: ModalLayoutProps) {
 
   return createPortal(
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-black/50 md:px-6"
+      className="z-modal fixed inset-0 flex items-center justify-center overflow-hidden bg-black/50 md:px-6"
       onClick={onClose}
     >
       <div

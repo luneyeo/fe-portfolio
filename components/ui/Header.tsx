@@ -67,12 +67,12 @@ export default function Header() {
   return (
     <>
       <header
-        className={`sticky top-0 z-50 h-18 transition-colors duration-300 ${solidBg ? 'bg-white shadow-[0_1px_0_0_rgba(229,231,235,1)]' : ''}`}
+        className={`z-header sticky top-0 h-18 transition-colors duration-300 ${solidBg || menuOpen ? 'bg-white shadow-[0_1px_0_0_rgba(229,231,235,1)]' : ''}`}
       >
         <div className="mx-0 flex h-full max-w-280 items-center justify-between px-6 lg:mx-auto lg:w-auto">
           <button
             type="button"
-            className={`cursor-pointer ${solidBg ? 'text-black' : 'text-white'}`}
+            className={`cursor-pointer ${solidBg || menuOpen ? 'text-black' : 'text-white'}`}
             onClick={() => window.location.reload()}
           >
             <span className="typo-16-semibold">여수경 </span>| 프론트엔드 개발자
@@ -99,7 +99,7 @@ export default function Header() {
           {/* 모바일 햄버거 버튼 */}
           <button
             type="button"
-            className={`cursor-pointer md:hidden ${solidBg ? 'text-gray-600' : 'text-white'}`}
+            className={`cursor-pointer md:hidden ${solidBg || menuOpen ? 'text-gray-600' : 'text-white'}`}
             onClick={() => setMenuOpen((prev) => !prev)}
             aria-label="메뉴 열기"
           >
@@ -110,7 +110,7 @@ export default function Header() {
 
       {/* 모바일 메뉴 오버레이 */}
       {menuOpen && (
-        <div className="fixed inset-0 z-40 flex flex-col bg-white pt-18 md:hidden">
+        <div className="z-mobile-menu fixed inset-0 flex flex-col bg-white pt-18 md:hidden">
           <ul className="flex flex-col items-center pt-8">
             {navItems.map(({ id, label }) => (
               <li key={id} className="w-full py-3">

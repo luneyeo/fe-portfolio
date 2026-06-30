@@ -2,6 +2,13 @@
 @import './colors.css';
 @import './font.css';
 
+@theme {
+  --z-scroll-to-top: 20;
+  --z-mobile-menu: 30;
+  --z-header: 40;
+  --z-modal: 50;
+}
+
 @layer base {
   html,
   body {

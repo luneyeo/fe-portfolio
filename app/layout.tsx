@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import React from 'react';
 import Footer from '@/components/ui/Footer';
 import Header from '@/components/ui/Header';
+import ScrollToTopButton from '@/components/ui/ScrollToTopButton';
 import '@/styles/globals.css';
 
 export const metadata: Metadata = {
@@ -24,6 +25,7 @@ export default function RootLayout({
         <Header />
         <main className="flex flex-col">{children}</main>
         <Footer />
+        <ScrollToTopButton />
         <div id="modal-root" />
       </body>
     </html>
