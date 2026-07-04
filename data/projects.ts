@@ -193,7 +193,7 @@ export const projects: Project[] = [
         title: 'Lighthouse 기반 성능·접근성 개선',
         content: [
           'LCP 개선을 위해 히어로 섹션 배경 이미지를 Next.js Image 컴포넌트(priority, fill)를 활용',
-          'Lighthouse 검사 기준 접근성과 SEO 점수 100점을 목표로 시맨틱 태그 사용 및 메타태그 관리',
+          '시맨틱 태그 사용 및 메타태그 관리하여 Lighthouse 검사 기준 접근성과 SEO 점수 100점 달성',
         ],
       },
       {
