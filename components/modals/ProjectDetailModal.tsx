@@ -37,7 +37,11 @@ function DetailRow({
 }
 
 function DetailList({ children }: { children: ReactNode }) {
-  return <ol className="flex list-decimal flex-col gap-6 pl-5">{children}</ol>;
+  return (
+    <ol className="flex list-decimal flex-col gap-6 pl-5 tracking-tight">
+      {children}
+    </ol>
+  );
 }
 
 export default function ProjectDetailModal({
@@ -57,7 +61,7 @@ export default function ProjectDetailModal({
     troubleshooting,
   } = project;
   return (
-    <div className="flex flex-col gap-8 md:pr-6">
+    <div className="flex flex-col gap-8">
       {/* 상단 영역 */}
       <div className="flex flex-col gap-6 border-b border-gray-200 pb-8">
         {/* 프로젝트 타입 뱃지, 타이틀 역역 */}
@@ -107,7 +111,7 @@ export default function ProjectDetailModal({
                   rel="noopener noreferrer"
                   className={cn(
                     'typo-14-regular flex w-full items-center justify-center gap-0.5 rounded-lg bg-gray-900 py-3 text-gray-50',
-                    'hover:bg-lime-400 hover:text-gray-900'
+                    'hover:bg-black'
                   )}
                 >
                   프로젝트 바로가기
@@ -159,11 +163,11 @@ export default function ProjectDetailModal({
                 <li key={i}>
                   <span>{item.title}</span>
                   {item.content && (
-                    <ul className="mt-2 pl-5">
+                    <ul className="mt-2 flex flex-col gap-1.5 pl-5">
                       {item.content.map((cont, contentIndex) => (
                         <li
                           key={contentIndex}
-                          className="typo-16-regular list-disc tracking-tight md:leading-loose"
+                          className="typo-16-regular list-disc"
                         >
                           {cont}
                         </li>
@@ -186,17 +190,13 @@ export default function ProjectDetailModal({
                       <span className="typo-16-regular block min-w-8 text-red-800">
                         에러
                       </span>
-                      <p className="typo-16-regular shrink tracking-tight">
-                        {item.error}
-                      </p>
+                      <p className="typo-16-regular shrink">{item.error}</p>
                     </div>
                     <div className="flex gap-2">
                       <span className="typo-16-regular block min-w-8 text-olive-500">
                         해결
                       </span>
-                      <p className="typo-16-regular shrink tracking-tight">
-                        {item.solution}
-                      </p>
+                      <p className="typo-16-regular shrink">{item.solution}</p>
                     </div>
                   </div>
                 </li>

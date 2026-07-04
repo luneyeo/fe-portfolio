@@ -37,7 +37,7 @@ export default function ModalLayout({ onClose, children }: ModalLayoutProps) {
           onClick={onClose}
           className={cn(
             'text-ink absolute top-5 right-5 flex size-10 cursor-pointer items-center justify-center rounded-full md:size-8',
-            'bg-gray-100 transition-colors hover:bg-olive-500 hover:text-white'
+            'bg-gray-200 transition-colors hover:bg-gray-700 hover:text-white'
           )}
           aria-label="닫기"
         >
@@ -45,7 +45,7 @@ export default function ModalLayout({ onClose, children }: ModalLayoutProps) {
         </button>
 
         {/* 프로젝트 상세 내용 영역 */}
-        <div className="modal-scroll h-full overflow-y-auto px-8 pt-14 pb-8">
+        <div className="modal-scroll h-full overflow-y-auto px-9 pt-14 pb-8">
           {children}
         </div>
       </div>
