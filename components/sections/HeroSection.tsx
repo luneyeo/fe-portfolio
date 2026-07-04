@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import IcArrowDown from '@/components/ui/icons/IcArrowDown';
 import IcGithub from '@/components/ui/icons/IcGithub';
 import IcMail from '@/components/ui/icons/IcMail';
@@ -9,14 +10,18 @@ const BG_IMAGE = '/images/img-sky.png';
 export default function HeroSection() {
   return (
     <section id="about" className="sticky top-0 -mt-18 overflow-hidden">
-      <div
-        className="relative flex min-h-screen w-full flex-col items-center justify-center bg-cover bg-center px-4.5"
-        style={{ backgroundImage: `url(${BG_IMAGE})` }}
-      >
+      <div className="relative flex min-h-screen w-full flex-col items-center justify-center px-4.5">
+        <Image
+          src={BG_IMAGE}
+          alt=""
+          fill
+          priority
+          className="-z-10 object-cover object-center"
+        />
         <div className="mb-5 flex flex-col text-center text-[36px] leading-[1.15] font-bold tracking-wide text-white md:mb-10 md:text-[50px] md:leading-[1.1] lg:text-[60px] lg:leading-16">
           <span>Thinking for</span>
           <span>Better</span>
-          <span>Experiences.</span>
+          <span>Experiences</span>
         </div>
 
         <div className="mb-10">
