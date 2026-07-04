@@ -5,13 +5,23 @@ export const experiences: Experience[] = [
     period: '2023. 07 ~ 2025. 07',
     company: '밀버스',
     role: '퍼블리셔',
-    position: 'Salesforce Marketing Cloud Engineer',
     tasks: [
       'JavaScript 기반 Web SDK를 활용한 고객 행동 데이터 수집·정제 사이트맵 설계 및 구현 (주요 이벤트 매핑 정확도 95% 이상 확보)',
       '수집된 행동 데이터 기반의 온사이트 캠페인 기획 및 타겟팅 최적화를 통해 클릭률(CTR) 15~25%, 전환율 5~10% 개선',
       'AMPscript 기반의 동적 콘텐츠 제어로 멀티 채널(Email, SMS, 알림톡) 메시징 시스템을 구축하여 캠페인 실행 시간 단축 및 업무 효율성 향상',
     ],
     skills: ['JavaScript', 'AMPscript', 'HTML', 'CSS', 'Salesforce MC'],
+  },
+  {
+    period: '2020. 03 ~ 2022. 06',
+    company: '라온마케팅',
+    role: '컨텐츠 디자이너',
+    tasks: [
+      '네이버 인쇄물 주문 제작 전용 스마트스토어 운영 및 CS 채널(네이버 톡톡, 카카오 친구톡) 관리',
+      '답례품 및 카페·매장 브랜딩용 맞춤형 인쇄물 기획 및 1:1 고객 조율을 통한 주문 제작 진행',
+      '실시간 CS 피드백 기반의 트렌드 인쇄 상품 기획 및 신속한 상품화로 전월 대비 매출 2배 달성',
+    ],
+    skills: ['Photoshop', 'Illustration'],
   },
 ];
 

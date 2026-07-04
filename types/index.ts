@@ -2,7 +2,7 @@ export interface Experience {
   period: string;
   company: string;
   role: string;
-  position: string;
+  position?: string;
   status?: string;
   tasks: string[];
   skills?: string[];
