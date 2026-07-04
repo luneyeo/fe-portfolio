@@ -13,7 +13,7 @@ export default function CertificateItem({
         <p className="typo-13-medium w-20 shrink-0 text-gray-600">{year}</p>
         <div className="flex min-w-0 flex-1 flex-col gap-0.5">
           <span className="typo-16-semibold text-gray-900">{name}</span>
-          <p className="typo-14-regular md:typo-13-regular text-gray-500">
+          <p className="typo-14-regular md:typo-13-regular text-gray-600">
             {description}
           </p>
         </div>
