@@ -176,6 +176,13 @@ export const projects: Project[] = [
     role: '기획, 디자인, 개발 전반 (1인 프로젝트)',
     details: [
       {
+        title: 'App Router 기본 구조 기반의 싱글 페이지 + 모달 구조 설계',
+        content: [
+          '포트폴리오는 소규모 개인 프로젝트인 만큼, 복잡한 라우팅 구조보다 코드가 직관적이고 한눈에 파악되는 구조가 더 중요하다고 판단하여 Next.js App Router 기본 구조를 그대로 활용',
+          '섹션 전환을 라우팅이 아닌 모달로 처리함으로써 불필요한 페이지 분리를 줄이고, 유지보수 편의성과 개발 속도를 동시에 확보',
+        ],
+      },
+      {
         title: 'z-index 체계적 관리',
         content: [
           '헤더, 모달, 버튼 등 레이어 충돌을 방지하기 위해 용도별 z-index 값을 CSS 변수로 분리하여 관리',
@@ -183,9 +190,10 @@ export const projects: Project[] = [
         ],
       },
       {
-        title: 'Lighthouse',
+        title: 'Lighthouse 기반 성능·접근성 개선',
         content: [
-          'Lighthouse 검사 기준 접근성과 SEO 점수 100점을 목표로 시맨틱 태그 사용 및 이미지 메타태그(alt) 관리.',
+          'LCP 개선을 위해 히어로 섹션 배경 이미지를 Next.js Image 컴포넌트(priority, fill)를 활용',
+          'Lighthouse 검사 기준 접근성과 SEO 점수 100점을 목표로 시맨틱 태그 사용 및 메타태그 관리',
         ],
       },
       {
