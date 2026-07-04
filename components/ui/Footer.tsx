@@ -6,25 +6,25 @@ const EMAIL = 'ssyeo1204@gmail.com';
 
 export default function Footer() {
   return (
-    <footer className="border-t border-gray-800 bg-gray-900">
+    <footer className="typo-14-regular border-t border-gray-800 bg-gray-900 text-white">
       <div className="mx-auto flex max-w-280 flex-col items-center justify-between gap-2 px-6 py-8 md:flex-row">
-        <p className="typo-13-regular text-gray-500">© 2026 YEO Sugyeong</p>
+        <p className="">© 2026 YEO Sugyeong</p>
         <div className="flex items-center gap-5">
           <a
             href={GITHUB_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-gray-400 transition-colors hover:text-white"
+            className="flex items-center gap-2 transition-colors"
           >
             <IcGithub />
-            <span className="typo-13-regular">GitHub</span>
+            GitHub
           </a>
           <a
             href={`mailto:${EMAIL}`}
-            className="flex items-center gap-2 text-gray-400 transition-colors hover:text-white"
+            className="flex items-center gap-2 transition-colors"
           >
             <IcMail />
-            <span className="typo-13-regular">{EMAIL}</span>
+            {EMAIL}
           </a>
         </div>
       </div>
