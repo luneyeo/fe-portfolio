@@ -50,7 +50,7 @@
 - `useInView` 커스텀 훅으로 `IntersectionObserver`를 추상화하여 요소가 뷰포트에 진입할 때만 애니메이션을 실행했습니다.
 - 한 번 진입한 요소는 `observer.disconnect()`로 감지를 즉시 해제해 불필요한 콜백 실행을 방지했습니다.
 - `AnimateOnView` 컴포넌트에 `delay` prop을 두어 목록 아이템이 순차적으로 등장하는 효과를 CSS `transitionDelay`만으로 구현했습니다. -->
-
+<!--
 ## ⚙️ 시작 가이드 (Local Development)
 
 ### 1. Clone & Directory 이동
@@ -58,4 +58,4 @@
 ```bash
 git clone https://github.com/luneyeo/fe-portfolio.git
 cd portfolio
-```
+``` -->
