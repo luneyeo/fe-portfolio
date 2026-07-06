@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   icons: {
     icon: '/icons/logo-lime.svg',
   },
+  verification: {
+    google: 'QEfcAyhkCvlGFRRzAyd_M9YLc3ISI69OGAQ3EGsbqEA',
+  },
 };
 
 export default function RootLayout({
