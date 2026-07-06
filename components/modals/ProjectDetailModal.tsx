@@ -101,7 +101,7 @@ export default function ProjectDetailModal({
 
         {/* 프로젝트 링크 버튼 */}
         {links && (
-          <div className="mt-3 flex gap-5">
+          <div className="mt-3 flex flex-col gap-2 sm:flex-row md:gap-5">
             {links.map((link) =>
               link.label === '사이트' ? (
                 <a
@@ -145,9 +145,9 @@ export default function ProjectDetailModal({
           <DetailRow label="주요 기능">
             <ul className="flex flex-col gap-1.5">
               {features.map((feature, i) => (
-                <li key={i} className="typo-16-regular flex items-center gap-2">
+                <li key={i} className="typo-16-regular flex items-start gap-2">
                   <IcCheck
-                    className="h-4.5 w-4.5 shrink-0"
+                    className="h-6 w-4.5 shrink-0"
                     circleFill="#7c9e48"
                   />
                   {feature}
