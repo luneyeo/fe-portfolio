@@ -45,7 +45,7 @@ export default function ModalLayout({ onClose, children }: ModalLayoutProps) {
         </button>
 
         {/* 프로젝트 상세 내용 영역 */}
-        <div className="modal-scroll h-full overflow-y-auto px-9 pt-14 pb-8">
+        <div className="modal-scroll h-full overflow-y-auto px-4.5 pt-14 pb-8 md:px-9">
           {children}
         </div>
       </div>
