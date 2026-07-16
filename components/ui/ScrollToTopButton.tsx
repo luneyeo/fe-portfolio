@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import IcArrowDown from './icons/IcArrowDown';
+import { IcArrowDown } from './icons';
 
 export default function ScrollToTopButton() {
   const [visible, setVisible] = useState(false);

@@ -1,5 +1,4 @@
-import IcGithub from './icons/IcGithub';
-import IcMail from './icons/IcMail';
+import { IcGithub, IcMail } from './icons';
 
 const GITHUB_URL = 'https://github.com/luneyeo';
 const EMAIL = 'ssyeo1204@gmail.com';

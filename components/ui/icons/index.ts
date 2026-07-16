@@ -1,0 +1,16 @@
+export { default as IcAdd } from './IcAdd';
+export { default as IcArrowDown } from './IcArrowDown';
+export { default as IcAward } from './IcAward';
+export { default as IcBriefcase } from './IcBriefcase';
+export { default as IcCalendar } from './IcCalendar';
+export { default as IcCheck } from './IcCheck';
+export { default as IcChevronDown } from './IcChevronDown';
+export { default as IcCode } from './IcCode';
+export { default as IcDatabase } from './IcDatabase';
+export { default as IcGithub } from './IcGithub';
+export { default as IcGradCap } from './IcGradCap';
+export { default as IcMail } from './IcMail';
+export { default as IcMenu } from './IcMenu';
+export { default as IcTool } from './IcTool';
+export { default as IcUser } from './IcUser';
+export { default as IcX } from './IcX';

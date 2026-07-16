@@ -1,8 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import IcMenu from './icons/IcMenu';
-import IcX from './icons/IcX';
+import { IcMenu, IcX } from './icons';
 
 const navItems = [
   { id: 'about', label: 'About' },

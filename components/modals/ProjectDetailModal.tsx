@@ -1,8 +1,7 @@
 import type { Project } from '@/types';
 import Badge from '../common/Badge';
-import IcCheck from '../ui/icons/IcCheck';
+import { IcCheck, IcGithub } from '../ui/icons';
 import { ReactNode } from 'react';
-import IcGithub from '../ui/icons/IcGithub';
 import { cn } from '@/utils/cn';
 
 interface ProjectDetailModalProps {

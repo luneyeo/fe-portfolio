@@ -3,9 +3,7 @@ import CertificateItem from '../common/CertificateItem';
 import EducationItem from '../common/EducationItem';
 import ExperienceItem from '../common/ExperienceItem';
 import ExperienceSubSectionProps from '../common/ExperienceSubSection';
-import IcAward from '../ui/icons/IcAward';
-import IcBriefcase from '../ui/icons/IcBriefcase';
-import IcGradCap from '../ui/icons/IcGradCap';
+import { IcAward, IcBriefcase, IcGradCap } from '../ui/icons';
 import SectionTitle from '../common/SectionTitle';
 
 export default function ExperienceSection() {

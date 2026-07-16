@@ -3,7 +3,7 @@
 import { cn } from '@/utils/cn';
 import { ReactNode, useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import IcX from '../ui/icons/IcX';
+import { IcX } from '../ui/icons';
 
 interface ModalLayoutProps {
   onClose: () => void;

@@ -1,6 +1,4 @@
-import IcCode from '@/components/ui/icons/IcCode';
-import IcDatabase from '@/components/ui/icons/IcDatabase';
-import IcTool from '@/components/ui/icons/IcTool';
+import { IcCode, IcDatabase, IcTool } from '@/components/ui/icons';
 
 import type { SkillCategory } from '@/types';
 

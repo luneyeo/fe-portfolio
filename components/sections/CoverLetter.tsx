@@ -1,7 +1,5 @@
 import Image from 'next/image';
-import IcArrowDown from '@/components/ui/icons/IcArrowDown';
-import IcGithub from '@/components/ui/icons/IcGithub';
-import IcMail from '@/components/ui/icons/IcMail';
+import { IcArrowDown, IcGithub, IcMail } from '@/components/ui/icons';
 
 const GITHUB_URL = 'https://github.com/luneyeo';
 const GITHUB_LABEL = GITHUB_URL.replace('https://', '');
