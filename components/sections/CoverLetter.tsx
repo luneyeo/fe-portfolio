@@ -53,7 +53,7 @@ export default function CoverLetter() {
             </p>
 
             {/* 인용 카드 */}
-            <blockquote className="relative mt-8 overflow-hidden rounded-2xl bg-gray-950 p-6 md:px-11 md:py-7">
+            <blockquote className="relative mt-8 overflow-hidden rounded-2xl bg-gray-950 p-9 md:px-11 md:py-7">
               <span
                 aria-hidden
                 className="text-30 pointer-events-none absolute top-4 left-5 leading-none font-bold text-lime-400"
