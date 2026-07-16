@@ -67,11 +67,11 @@ export default function Header() {
   return (
     <>
       <header
-        className={`z-header sticky top-0 h-18 transition-colors duration-300 ${solidBg || menuOpen ? 'bg-white shadow-[0_1px_0_0_rgba(229,231,235,1)]' : ''}`}
+        className={`z-header sticky top-0 h-18 bg-white transition-colors duration-300 ${solidBg || menuOpen ? 'shadow-[0_1px_0_0_rgba(229,231,235,1)]' : ''}`}
       >
         <div className="mx-0 flex h-full max-w-280 items-center justify-between px-6 lg:mx-auto lg:w-auto">
           <h1
-            className={`cursor-pointer ${solidBg || menuOpen ? 'text-black' : 'text-white'}`}
+            className="cursor-pointer text-black"
             onClick={() => window.location.reload()}
           >
             <span className="typo-16-semibold">여수경 </span>| 프론트엔드 개발자
@@ -84,9 +84,9 @@ export default function Header() {
                   <button
                     type="button"
                     onClick={() => handleNavClick(id)}
-                    className={`typo-14-medium cursor-pointer transition-colors hover:text-gray-700 ${
+                    className={`typo-14-medium cursor-pointer text-gray-400 transition-colors hover:text-gray-700 ${
                       activeId === id ? 'text-gray-700' : ''
-                    } ${solidBg ? 'text-gray-400' : 'text-white hover:text-gray-900'}`}
+                    }`}
                   >
                     {label}
                   </button>
@@ -98,7 +98,7 @@ export default function Header() {
           {/* 모바일 햄버거 버튼 */}
           <button
             type="button"
-            className={`cursor-pointer md:hidden ${solidBg || menuOpen ? 'text-gray-600' : 'text-white'}`}
+            className="cursor-pointer text-gray-600 md:hidden"
             onClick={() => setMenuOpen((prev) => !prev)}
             aria-label="메뉴 열기"
           >
