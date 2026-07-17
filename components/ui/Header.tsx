@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { IcMenu, IcX } from './icons';
 
 const navItems = [
-  { id: 'about', label: 'About' },
+  { id: 'cover-letter', label: 'About' },
   { id: 'skills', label: 'Skills' },
   { id: 'projects', label: 'Projects' },
   { id: 'experience', label: 'Experience' },
