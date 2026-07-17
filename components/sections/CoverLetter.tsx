@@ -28,7 +28,7 @@ export default function CoverLetter() {
   return (
     <section
       id="cover-letter"
-      className="sticky top-18 min-h-screen overflow-hidden bg-linear-to-tl from-olive-500/7 to-transparent to-70%"
+      className="sticky top-18 min-h-screen overflow-hidden bg-linear-to-tl from-olive-500/30 to-transparent to-45%"
     >
       <div className="mx-auto flex min-h-screen w-auto max-w-280 flex-col justify-center px-4.5 pb-40 md:px-6">
         {/* 메인 내용 */}
