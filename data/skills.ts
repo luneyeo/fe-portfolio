@@ -40,7 +40,7 @@ export const skills: SkillCategory[] = [
         iconSrc: '/icons/ic-zustand.svg',
       },
       {
-        name: 'Tanstack',
+        name: 'Tanstack Query',
         description:
           '서버 상태 관리 및 캐싱 전략을 통한 API 요청 최적화 및 비동기 데이터 처리',
         iconSrc: '/icons/ic-tanstack.png',
