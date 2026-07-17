@@ -36,3 +36,27 @@
     background-clip: padding-box;
   }
 }
+
+/* 기술 스택 배지 애니메이션 */
+@theme {
+  /* orbit과 orbit-reverse의 duration은 동일해야 아이콘이 정방향 유지됨 */
+  --animate-orbit: orbit 24s linear infinite;
+  --animate-orbit-reverse: orbit 24s linear infinite reverse;
+  --animate-breathe: breathe 2.5s ease-in-out infinite;
+
+  @keyframes orbit {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes breathe {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+}
