@@ -154,7 +154,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    thumbnail: '/images/img-project.png',
+    thumbnail: '/images/img-feportfolio.jpg',
     subTitle:
       '프로젝트와 경험을 한눈에 확인할 수 있는 개인 포트폴리오 웹사이트',
     name: '개인 포트폴리오 웹사이트',
