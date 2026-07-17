@@ -70,7 +70,7 @@ export default function CoverLetter() {
                 <span className="text-lime-200">
                   사용자 경험에 연결해 실질적인 가치
                 </span>
-                를 만들어내는 프론트엔드 개발자 가 되겠습니다.
+                를 만들어내는 프론트엔드 개발자가 되겠습니다.
               </p>
               <span
                 aria-hidden
