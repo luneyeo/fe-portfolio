@@ -83,8 +83,8 @@ export default function Header() {
                   <button
                     type="button"
                     onClick={() => handleNavClick(id)}
-                    className={`typo-14-medium cursor-pointer text-gray-400 transition-colors hover:text-gray-700 ${
-                      activeId === id ? 'text-gray-700' : ''
+                    className={`typo-14-medium cursor-pointer text-gray-500 transition-colors hover:text-gray-900 ${
+                      activeId === id ? 'text-gray-900' : ''
                     }`}
                   >
                     {label}
@@ -116,7 +116,7 @@ export default function Header() {
                   type="button"
                   onClick={() => handleNavClick(id)}
                   className={`typo-20-medium w-full cursor-pointer transition-colors ${
-                    activeId === id ? 'text-gray-900' : 'text-gray-400'
+                    activeId === id ? 'text-gray-900' : 'text-gray-500'
                   }`}
                 >
                   {label}

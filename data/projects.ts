@@ -195,7 +195,7 @@ export const projects: Project[] = [
         ],
       },
       {
-        title: 'Lighthouse 기반 성능·접근성 개선',
+        title: 'Lighthouse 기반 접근성 개선',
         content: [
           '시맨틱 태그 사용 및 메타태그 관리하여 Lighthouse 검사 기준 접근성과 SEO 점수 100점 달성',
         ],
