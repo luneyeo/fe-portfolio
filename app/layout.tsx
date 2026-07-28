@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/next';
 import type { Metadata } from 'next';
 import React from 'react';
 import Footer from '@/components/ui/Footer';
@@ -30,6 +31,7 @@ export default function RootLayout({
         <Footer />
         <ScrollToTopButton />
         <div id="modal-root" />
+        <Analytics />
       </body>
     </html>
   );
