@@ -21,7 +21,7 @@ export default function ProjectsSection() {
         subTitle="PROJECTS"
         descrpition="카드를 클릭하여 프로젝트 상세를 확인해보세요"
       />
-      <div className="flex flex-col gap-11 lg:mx-auto lg:w-225">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-11">
         {projects.map((project) => (
           <ProjectCard
             key={project.name}
