@@ -2,6 +2,65 @@ import type { Project } from '@/types';
 
 export const projects: Project[] = [
   {
+    thumbnail: '/images/img-shareit.png',
+    subTitle: '제품을 공유할 수 있는, 비공개 그룹 기반의 제품 추천 플랫폼',
+    name: 'Shareit!',
+    period: '2026.06 ~ 2026.09',
+    teamSize: '1인',
+    skills: [
+      'Supabase',
+      'React',
+      'Next.js',
+      'TypeScript',
+      'TanStack Query',
+      'Zuntand',
+      'Zod',
+      'React-Hook-Form',
+      'Embla Carousel',
+      'Vercel',
+    ],
+    types: ['개인 프로젝트', '모바일'],
+    description:
+      '이 서비스는 그룹 단위로 제품을 추천하고 공유할 수 있는 커뮤니티 플랫폼으로, 사용자가 추천 제품을 등록해 멤버들과 실시간으로 정보를 나누고 대시보드 기반 UI로 이를 효율적으로 탐색할 수 있습니다. 또한 입장 코드를 통해 관심사 기반의 그룹에 참여할 수 있으며, 관리자는 멤버 및 콘텐츠 현황을 확인하고 그룹 운영을 직접 관리할 수 있습니다.',
+    features: [
+      '카카오 소셜 로그인',
+      '그룹 관리(생성/수정/삭제)',
+      '그룹별 상품 관리(생성/수정/삭제)',
+    ],
+    role: '서비스 기획, 디자인, 프론트/백엔드 전담',
+    details: [
+      {
+        title: 'SEO 전략 재정의',
+        content: [
+          '비공개 그룹 기반 서비스 특성상 일반적인 SEO 가이드를 그대로 적용하면 내부 콘텐츠가 노출될 위험이 있다고 판단하여, 기본 차단(noindex) 방향을 선택함',
+          '이를 위해 root 메타데이터에서 전체를 noindex로 설정하고, 공개가 필요한 랜딩 페이지만 opt-in 방식으로 색인을 허용함',
+          '비공개 콘텐츠의 색인 노출을 원천 차단하면서, 인증 기반 접근 제어와 결합해 보안성과 정보 통제 수준을 강화',
+        ],
+      },
+      {
+        title: 'Supabase 직접 호출 아키텍처',
+        content: [
+          '사이드 프로젝트의 제한된 리소스 상황에서 개발 속도와 효율을 높이기 위해 별도의 BFF 레이어 없이도 빠르게 기능 구현이 가능한 구조가 필요하다고 판단',
+          '이를 위해 Supabase-js SDK를 활용해 Auth, Storage, CRUD를 클라이언트에서 직접 처리하여 백엔드 보일러플레이트를 최소화하고 프론트엔드 개발에 집중했으며, 클라이언트에 노출될 수 있는 데이터 접근 로직은 Supabase RLS 정책으로 제어',
+          '개발 생산성과 구현 속도를 크게 향상시키면서도, RLS 기반 권한 제어를 통해 데이터 보안 수준을 안정적으로 유지',
+        ],
+      },
+    ],
+    troubleshooting: [
+      {
+        title: '상품 상세 페이지 LCP 개선',
+        error:
+          '초기에는 이미지 최적화를 통해 LCP를 30.91s → 25.98s로 개선했지만, 여전히 높은 수치를 보였습니다. 원인을 분석한 결과, 상품 데이터가 초기 HTML에 포함되지 않고 클라이언트에서 늦게 요청되면서 LCP 지연이 발생하고 있었습니다.',
+        solution:
+          '상품 데이터를 서버에서 미리 fetch하여 초기 HTML에 포함시키고, HydrationBoundary를 통해 해당 데이터를 클라이언트의 React Query 캐시에 전달하는 방식으로 개선했습니다. 그 결과 LCP를 30.91s → 7.71s로 약 75% 단축할 수 있었습니다.',
+      },
+    ],
+    links: [
+      { label: '사이트', url: 'https://shareit-puce.vercel.app' },
+      { label: '깃헙', url: 'https://github.com/luneyeo/shareit' },
+    ],
+  },
+  {
     thumbnail: '/images/img-bookscape.png',
     subTitle: '체험 탐색부터 예약까지 모든 흐름을 한눈에 관리할 수 있는 서비스',
     name: 'Bookscape',
@@ -158,7 +217,7 @@ export const projects: Project[] = [
     subTitle:
       '프로젝트와 경험을 한눈에 확인할 수 있는 개인 포트폴리오 웹사이트',
     name: '개인 포트폴리오 웹사이트',
-    period: '2026.05 ~ ',
+    period: '2026.05',
     teamSize: '1인',
     skills: [
       'React',
