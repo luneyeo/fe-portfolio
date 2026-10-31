@@ -2,6 +2,17 @@ import type { Certificate, Education, Experience } from '@/types';
 
 export const experiences: Experience[] = [
   {
+    period: '2026. 10 ~ 2026. 11',
+    company: '처음청약',
+    role: '프론트엔드(인턴)',
+    tasks: [
+      '청약 자격 결과 유형에 따라 컴포넌트를 동적으로 조합하는 ‘3분 체크업’ 결과 페이지 구현 및 백엔드 API 연동',
+      '리스트, 표, 그래프 등 콘텐츠 유형별 아이템을 재사용 가능한 컴포넌트로 모듈화하고, AI가 콘텐츠에 적합한 아이템을 선택·조합하도록 카드뉴스 제작 자동화 구조 개선',
+      '기존 홈페이지 전면 개편 및 신규 페이지 추가를 위한 라우트 구성, 디자인 시안 기반 UI 구현, API 연동 및 Chakra UI를 활용한 반응형 개발',
+    ],
+    skills: ['React', 'Next.js', 'TypeScript', 'Chakra UI'],
+  },
+  {
     period: '2023. 07 ~ 2025. 07',
     company: '밀버스',
     role: '퍼블리셔',
